@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adani One | Your Airport</title>
+
+    <meta name="description"
+        content="Adani One Airport — manage flights, parking, lounges, dining, shopping and your complete airport journey.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">A</span>
+
+                <span class="logo-text">
+                    <strong>adani</strong>
+                    <small>ONE</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home" class="active">Home</a>
+                <a href="#flights">Flights</a>
+                <a href="#services">Services</a>
+                <a href="#journey">My Journey</a>
+                <a href="#offers">Offers</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    ◐
+                </button>
+
+                <button class="login-btn" id="loginBtn">
+                    Log in
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    Your airport. One app.
+                </div>
+
+                <h1>
+                    Your journey
+                    <span>starts here.</span>
+                </h1>
+
+                <p>
+                    Fly smarter with seamless flight tracking, faster check-ins,
+                    airport services, dining, shopping and everything you need
+                    before you take off.
+                </p>
+
+                <div class="hero-actions">
+
+                    <button class="primary-btn" id="checkFlightBtn">
+                        Check flight status
+                        <span>→</span>
+                    </button>
+
+                    <button class="secondary-btn" id="exploreAirportBtn">
+                        Explore airport
+                    </button>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div class="trust-avatars">
+                        <span>R</span>
+                        <span>A</span>
+                        <span>S</span>
+                        <span>+</span>
+                    </div>
+
+                    <div>
+                        <strong>Millions of journeys</strong>
+                        <small>made simpler every year</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FLIGHT SEARCH
+        ========================== -->
+
+        <section class="flight-search-section" id="flights">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <div>
+                        <span class="section-label">FLIGHT STATUS</span>
+
+                        <h2>
+                            Know before
+                            <span>you go.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Get real-time information about departures and arrivals
+                        and stay updated throughout your journey.
+                    </p>
+
+                </div>
+
+
+                <div class="flight-search-card">
+
+                    <div class="search-tabs">
+
+                        <button class="search-tab active" data-tab="flight">
+                            Flight number
+                        </button>
+
+                        <button class="search-tab" data-tab="route">
+                            From & To
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-content" id="flightSearchContent">
+
+                        <div class="input-group">
+
+                            <label for="flightNumber">
+                                Flight number
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span>✈</span>
+
+                                <input type="text" id="flightNumber" placeholder="e.g. AI 302" maxlength="10">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="flightDate">
+                                Travel date
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span>▣</span>
+
+                                <input type="date" id="flightDate">
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="search-btn" id="searchFlightBtn">
+                            Search flight
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-content hidden" id="routeSearchContent">
+
+                        <div class="input-group">
+
+                            <label for="fromAirport">
+                                From
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span>●</span>
+
+                                <select id="fromAirport">
+
+                                    <option value="DEL">
+                                        Delhi
+                                    </option>
+
+                                    <option value="BOM">
+                                        Mumbai
+                                    </option>
+
+                                    <option value="BLR">
+                                        Bengaluru
+                                    </option>
+
+                                    <option value="HYD">
+                                        Hyderabad
+                                    </option>
+
+                                    <option value="MAA">
+                                        Chennai
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-swap" id="routeSwap">
+                            ⇄
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="toAirport">
+                                To
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span>●</span>
+
+                                <select id="toAirport">
+
+                                    <option value="BOM">
+                                        Mumbai
+                                    </option>
+
+                                    <option value="DEL">
+                                        Delhi
+                                    </option>
+
+                                    <option value="BLR">
+                                        Bengaluru
+                                    </option>
+
+                                    <option value="HYD">
+                                        Hyderabad
+                                    </option>
+
+                                    <option value="MAA">
+                                        Chennai
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="search-btn" id="searchRouteBtn">
+                            Find flights
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="flight-result" id="flightResult">
+
+                        <div class="result-icon">
+                            ✓
+                        </div>
+
+                        <div class="result-content">
+
+                            <strong id="resultTitle">
+                                Flight found
+                            </strong>
+
+                            <p id="resultMessage">
+                                Your flight information is ready.
+                            </p>
+
+                        </div>
+
+                        <button id="closeResult">
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Flight cards -->
+
+                <div class="flight-cards">
+
+                    <article class="flight-card">
+
+                        <div class="flight-card-top">
+
+                            <span class="flight-status on-time">
+                                On time
+                            </span>
+
+                            <span class="flight-number">
+                                AI 302
+                            </span>
+
+                        </div>
+
+                        <div class="flight-route">
+
+                            <div>
+                                <strong>DEL</strong>
+                                <small>Delhi</small>
+                            </div>
+
+                            <div class="route-line">
+
+                                <span>✈</span>
+
+                            </div>
+
+                            <div class="align-right">
+
+                                <strong>BOM</strong>
+                                <small>Mumbai</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flight-time">
+
+                            <span>
+                                06:15
+                            </span>
+
+                            <span>
+                                08:25
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="flight-card featured-flight">
+
+                        <div class="flight-card-top">
+
+                            <span class="flight-status boarding">
+                                Boarding
+                            </span>
+
+                            <span class="flight-number">
+                                6E 528
+                            </span>
+
+                        </div>
+
+                        <div class="flight-route">
+
+                            <div>
+                                <strong>BLR</strong>
+                                <small>Bengaluru</small>
+                            </div>
+
+                            <div class="route-line">
+
+                                <span>✈</span>
+
+                            </div>
+
+                            <div class="align-right">
+
+                                <strong>DEL</strong>
+                                <small>Delhi</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flight-time">
+
+                            <span>
+                                09:40
+                            </span>
+
+                            <span>
+                                12:25
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="flight-card">
+
+                        <div class="flight-card-top">
+
+                            <span class="flight-status delayed">
+                                Delayed
+                            </span>
+
+                            <span class="flight-number">
+                                AI 672
+                            </span>
+
+                        </div>
+
+                        <div class="flight-route">
+
+                            <div>
+                                <strong>HYD</strong>
+                                <small>Hyderabad</small>
+                            </div>
+
+                            <div class="route-line">
+
+                                <span>✈</span>
+
+                            </div>
+
+                            <div class="align-right">
+
+                                <strong>MAA</strong>
+                                <small>Chennai</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flight-time">
+
+                            <span>
+                                14:20
+                            </span>
+
+                            <span>
+                                15:35
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AIRPORT SERVICES
+        ========================== -->
+
+        <section class="services-section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        AIRPORT SERVICES
+                    </span>
+
+                    <h2>
+                        Everything you need,
+                        <span>in one place.</span>
+                    </h2>
+
+                    <p>
+                        From parking to boarding, make every part of your
+                        airport experience easier.
+                    </p>
+
+                </div>
+
+
+                <div class="service-grid">
+
+                    <article class="service-card large-service">
+
+                        <div class="service-image parking-image"></div>
+
+                        <div class="service-content">
+
+                            <div class="service-icon">
+                                P
+                            </div>
+
+                            <h3>
+                                Smart Parking
+                            </h3>
+
+                            <p>
+                                Find, reserve and pay for your airport
+                                parking before you arrive.
+                            </p>
+
+                            <button class="text-btn service-action" data-service="parking">
+                                Reserve parking →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Airport Lounge
+                        </h3>
+
+                        <p>
+                            Relax before your flight with premium lounges,
+                            food and comfortable seating.
+                        </p>
+
+                        <button class="text-btn service-action" data-service="lounge">
+                            Explore lounges →
+                        </button>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            Food & Dining
+                        </h3>
+
+                        <p>
+                            Discover restaurants, cafes and quick bites
+                            across your terminal.
+                        </p>
+
+                        <button class="text-btn service-action" data-service="dining">
+                            Find dining →
+                        </button>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ♢
+                        </div>
+
+                        <h3>
+                            Shopping
+                        </h3>
+
+                        <p>
+                            Explore airport shopping, duty-free stores
+                            and exclusive brands.
+                        </p>
+
+                        <button class="text-btn service-action" data-service="shopping">
+                            Shop now →
+                        </button>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Cab & Transport
+                        </h3>
+
+                        <p>
+                            Book airport transfers and connect to the city
+                            without the hassle.
+                        </p>
+
+                        <button class="text-btn service-action" data-service="transport">
+                            Book a ride →
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             JOURNEY
+        ========================== -->
+
+        <section class="journey-section" id="journey">
+
+            <div class="container">
+
+                <div class="journey-wrapper">
+
+                    <div class="journey-copy">
+
+                        <span class="section-label">
+                            YOUR JOURNEY
+                        </span>
+
+                        <h2>
+                            One journey.
+                            <span>Every detail.</span>
+                        </h2>
+
+                        <p>
+                            Keep your complete airport experience organised
+                            from the moment you leave home until you reach
+                            your destination.
+                        </p>
+
+                        <button class="primary-btn" id="journeyBtn">
+                            Plan my journey
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="journey-timeline">
+
+                        <div class="journey-step completed">
+
+                            <div class="step-number">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Step 01
+                                </span>
+
+                                <h3>
+                                    Leave for airport
+                                </h3>
+
+                                <p>
+                                    Book a cab and check traffic.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-line"></div>
+
+
+                        <div class="journey-step completed">
+
+                            <div class="step-number">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Step 02
+                                </span>
+
+                                <h3>
+                                    Arrive & park
+                                </h3>
+
+                                <p>
+                                    Use your reserved parking space.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-line"></div>
+
+
+                        <div class="journey-step current">
+
+                            <div class="step-number">
+                                03
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Step 03
+                                </span>
+
+                                <h3>
+                                    Check-in
+                                </h3>
+
+                                <p>
+                                    Check in and get your boarding pass.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-line"></div>
+
+
+                        <div class="journey-step">
+
+                            <div class="step-number">
+                                04
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Step 04
+                                </span>
+
+                                <h3>
+                                    Board & fly
+                                </h3>
+
+                                <p>
+                                    Find your gate and enjoy your flight.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CHECK-IN
+        ========================== -->
+
+        <section class="checkin-section">
+
+            <div class="container">
+
+                <div class="checkin-card">
+
+                    <div class="checkin-content">
+
+                        <span class="section-label">
+                            FASTER CHECK-IN
+                        </span>
+
+                        <h2>
+                            Skip the queue.
+                            <span>Keep moving.</span>
+                        </h2>
+
+                        <p>
+                            Complete your web check-in and keep your boarding
+                            pass ready before reaching the airport.
+                        </p>
+
+                        <button class="primary-btn" id="checkinBtn">
+                            Start check-in
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="boarding-pass">
+
+                        <div class="boarding-top">
+
+                            <div class="mini-logo">
+                                <span>A</span>
+                                <strong>ONE</strong>
+                            </div>
+
+                            <span>
+                                BOARDING PASS
+                            </span>
+
+                        </div>
+
+
+                        <div class="boarding-route">
+
+                            <div>
+                                <strong>MAA</strong>
+                                <small>Chennai</small>
+                            </div>
+
+                            <div class="boarding-plane">
+                                ✈
+                            </div>
+
+                            <div>
+                                <strong>DEL</strong>
+                                <small>Delhi</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="boarding-details">
+
+                            <div>
+                                <small>Passenger</small>
+                                <strong>YOUR NAME</strong>
+                            </div>
+
+                            <div>
+                                <small>Flight</small>
+                                <strong>AI 540</strong>
+                            </div>
+
+                            <div>
+                                <small>Gate</small>
+                                <strong>B12</strong>
+                            </div>
+
+                            <div>
+                                <small>Seat</small>
+                                <strong>14A</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="barcode">
+                            || ||| |||| | ||| || ||||
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OFFERS
+        ========================== -->
+
+        <section class="offers-section" id="offers">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            TRAVEL SMART
+                        </span>
+
+                        <h2>
+                            More from
+                            <span>your airport.</span>
+                        </h2>
+
+                    </div>
+
+                    <button class="text-btn" id="allOffersBtn">
+                        View all offers →
+                    </button>
+
+                </div>
+
+
+                <div class="offers-grid">
+
+                    <article class="offer-card offer-main">
+
+                        <div class="offer-overlay"></div>
+
+                        <div class="offer-content">
+
+                            <span class="offer-tag">
+                                AIRPORT EXCLUSIVE
+                            </span>
+
+                            <h3>
+                                Turn waiting time
+                                into me time.
+                            </h3>
+
+                            <p>
+                                Enjoy premium lounge access,
+                                complimentary food and a peaceful space.
+                            </p>
+
+                            <button class="light-btn offer-action">
+                                Explore lounge offers →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="offer-card offer-small">
+
+                        <div class="offer-small-icon">
+                            %
+                        </div>
+
+                        <span class="offer-tag dark-tag">
+                            SHOP & SAVE
+                        </span>
+
+                        <h3>
+                            Up to 30% off
+                            airport shopping
+                        </h3>
+
+                        <button class="text-btn offer-action">
+                            Discover deals →
+                        </button>
+
+                    </article>
+
+
+                    <article class="offer-card offer-small">
+
+                        <div class="offer-small-icon">
+                            ☕
+                        </div>
+
+                        <span class="offer-tag dark-tag">
+                            DINE
+                        </span>
+
+                        <h3>
+                            Delicious stops
+                            before takeoff
+                        </h3>
+
+                        <button class="text-btn offer-action">
+                            Find restaurants →
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             APP CTA
+        ========================== -->
+
+        <section class="app-section">
+
+            <div class="container">
+
+                <div class="app-card">
+
+                    <div class="app-copy">
+
+                        <span class="section-label">
+                            ADANI ONE APP
+                        </span>
+
+                        <h2>
+                            Your airport,
+                            <span>in your pocket.</span>
+                        </h2>
+
+                        <p>
+                            Track flights, manage bookings, discover airport
+                            services and make every journey easier.
+                        </p>
+
+                        <div class="app-buttons">
+
+                            <button class="store-btn" id="googlePlayBtn">
+
+                                <span class="store-icon">
+                                    ▶
+                                </span>
+
+                                <span>
+                                    <small>GET IT ON</small>
+                                    Google Play
+                                </span>
+
+                            </button>
+
+
+                            <button class="store-btn" id="appStoreBtn">
+
+                                <span class="store-icon">
+                                    
+                                </span>
+
+                                <span>
+                                    <small>DOWNLOAD ON THE</small>
+                                    App Store
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="phone-mockup">
+
+                        <div class="phone-screen">
+
+                            <div class="phone-header">
+
+                                <strong>
+                                    adani
+                                </strong>
+
+                                <span>
+                                    ONE
+                                </span>
+
+                            </div>
+
+                            <div class="phone-greeting">
+                                <small>
+                                    GOOD MORNING
+                                </small>
+
+                                <h4>
+                                    Ready to fly?
+                                </h4>
+                            </div>
+
+                            <div class="phone-flight">
+
+                                <div>
+
+                                    <small>
+                                        NEXT FLIGHT
+                                    </small>
+
+                                    <strong>
+                                        AI 540
+                                    </strong>
+
+                                </div>
+
+                                <span class="mini-status">
+                                    ON TIME
+                                </span>
+
+                            </div>
+
+                            <div class="phone-route">
+
+                                <strong>
+                                    MAA
+                                </strong>
+
+                                <span>
+                                    ─ ✈ ─
+                                </span>
+
+                                <strong>
+                                    DEL
+                                </strong>
+
+                            </div>
+
+                            <div class="phone-services">
+
+                                <span>Parking</span>
+                                <span>Lounge</span>
+                                <span>Food</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+
+                        <span class="logo-mark">
+                            A
+                        </span>
+
+                        <span class="logo-text">
+                            <strong>adani</strong>
+                            <small>ONE</small>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Making every airport journey simpler,
+                        smarter and more enjoyable.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <a href="#flights">
+                        Flight status
+                    </a>
+
+                    <a href="#services">
+                        Airport services
+                    </a>
+
+                    <a href="#journey">
+                        My journey
+                    </a>
+
+                    <a href="#offers">
+                        Offers
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Services
+                    </h4>
+
+                    <a href="#services">
+                        Parking
+                    </a>
+
+                    <a href="#services">
+                        Lounges
+                    </a>
+
+                    <a href="#services">
+                        Dining
+                    </a>
+
+                    <a href="#services">
+                        Shopping
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Support
+                    </h4>
+
+                    <a href="#" class="footer-action">
+                        Help centre
+                    </a>
+
+                    <a href="#" class="footer-action">
+                        Contact us
+                    </a>
+
+                    <a href="#" class="footer-action">
+                        Accessibility
+                    </a>
+
+                    <a href="#" class="footer-action">
+                        Privacy
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Adani One. UI concept for academic project.
+                </span>
+
+                <span>
+                    Made for modern journeys.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div class="toast" id="toast" role="status">
+        <span class="toast-icon">
+            ✓
+        </span>
+
+        <div>
+            <strong id="toastTitle">
+                Done
+            </strong>
+
+            <p id="toastMessage">
+                Action completed successfully.
+            </p>
+        </div>
+
+        <button id="toastClose">
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <button class="back-top" id="backTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

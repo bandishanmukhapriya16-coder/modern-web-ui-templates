@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WildGuard | Endangered Species & Conservation</title>
+
+    <meta name="description" content="Explore endangered species, conservation efforts and ways to protect wildlife.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="home">
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">W</span>
+            <span>WildGuard</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#species">Species</a>
+            <a href="#conservation">Conservation</a>
+            <a href="#stories">Stories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span class="sun">☀</span>
+                <span class="toggle-circle"></span>
+                <span class="moon">☾</span>
+            </button>
+
+            <a href="#support" class="nav-button">
+                Support Wildlife
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span></span>
+                    Protecting life on Earth
+                </div>
+
+                <h1>
+                    Every species
+                    <em>deserves</em>
+                    a future.
+                </h1>
+
+                <p>
+                    Discover endangered wildlife, understand the threats
+                    they face and explore the people working to protect
+                    our planet's most vulnerable species.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#species" class="primary-button">
+                        Explore Species
+                        <span>→</span>
+                    </a>
+
+                    <a href="#conservation" class="secondary-button">
+                        Our Conservation Work
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div class="trust-item">
+                        <strong>7,000+</strong>
+                        <span>Threatened species</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <strong>120+</strong>
+                        <span>Conservation projects</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <strong>48</strong>
+                        <span>Countries reached</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-image-card">
+
+                    <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=85"
+                        alt="Elephant in the wild">
+
+                    <div class="image-overlay"></div>
+
+                    <div class="hero-image-caption">
+                        <span>Featured species</span>
+                        <strong>African Elephant</strong>
+                    </div>
+
+                </div>
+
+                <div class="floating-stat">
+                    <span class="stat-icon">♥</span>
+                    <div>
+                        <strong>Hope in action</strong>
+                        <small>Conservation makes a difference</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="search-section">
+
+            <div class="search-heading">
+
+                <span class="section-label">EXPLORE WILDLIFE</span>
+
+                <h2>
+                    Meet the species
+                    <em>we're protecting.</em>
+                </h2>
+
+            </div>
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input type="text" id="speciesSearch" placeholder="Search species..." aria-label="Search species">
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SPECIES ================= -->
+
+        <section class="species-section" id="species">
+
+            <div class="section-top">
+
+                <div>
+                    <span class="section-label">ENDANGERED WILDLIFE</span>
+
+                    <h2>
+                        Stories behind
+                        <em>the species.</em>
+                    </h2>
+                </div>
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="mammal">
+                        Mammals
+                    </button>
+
+                    <button class="filter-btn" data-filter="bird">
+                        Birds
+                    </button>
+
+                    <button class="filter-btn" data-filter="marine">
+                        Marine
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="species-grid" id="speciesGrid">
+
+                <!-- Species 1 -->
+
+                <article class="species-card" data-category="mammal" data-name="Amur Leopard">
+
+                    <div class="species-image">
+
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=85"
+                            alt="Leopard in the wild">
+
+                        <span class="status critically">
+                            Critically Endangered
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save Amur Leopard">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="species-content">
+
+                        <span class="species-type">
+                            MAMMAL
+                        </span>
+
+                        <h3>Amur Leopard</h3>
+
+                        <p>
+                            One of the world's rarest big cats,
+                            surviving in the forests of eastern Russia.
+                        </p>
+
+                        <div class="species-footer">
+
+                            <span>
+                                <strong>~100</strong> wild
+                            </span>
+
+                            <a href="#support">Learn more →</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Species 2 -->
+
+                <article class="species-card" data-category="mammal" data-name="Sumatran Orangutan">
+
+                    <div class="species-image">
+
+                        <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=900&q=85"
+                            alt="Orangutan">
+
+                        <span class="status critically">
+                            Critically Endangered
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save Sumatran Orangutan">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="species-content">
+
+                        <span class="species-type">
+                            MAMMAL
+                        </span>
+
+                        <h3>Sumatran Orangutan</h3>
+
+                        <p>
+                            A highly intelligent forest dweller threatened
+                            by habitat loss and illegal wildlife trade.
+                        </p>
+
+                        <div class="species-footer">
+
+                            <span>
+                                <strong>14,000</strong> wild
+                            </span>
+
+                            <a href="#support">Learn more →</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Species 3 -->
+
+                <article class="species-card" data-category="bird" data-name="Philippine Eagle">
+
+                    <div class="species-image">
+
+                        <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=85"
+                            alt="Eagle in nature">
+
+                        <span class="status endangered">
+                            Endangered
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save Philippine Eagle">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="species-content">
+
+                        <span class="species-type">
+                            BIRD
+                        </span>
+
+                        <h3>Philippine Eagle</h3>
+
+                        <p>
+                            A powerful forest eagle and national symbol
+                            of the Philippines.
+                        </p>
+
+                        <div class="species-footer">
+
+                            <span>
+                                <strong>&lt;400</strong> pairs
+                            </span>
+
+                            <a href="#support">Learn more →</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Species 4 -->
+
+                <article class="species-card" data-category="marine" data-name="Hawksbill Turtle">
+
+                    <div class="species-image">
+
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                            alt="Marine turtle habitat">
+
+                        <span class="status critically">
+                            Critically Endangered
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save Hawksbill Turtle">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="species-content">
+
+                        <span class="species-type">
+                            MARINE
+                        </span>
+
+                        <h3>Hawksbill Turtle</h3>
+
+                        <p>
+                            A reef-dwelling sea turtle threatened by
+                            habitat destruction and illegal trade.
+                        </p>
+
+                        <div class="species-footer">
+
+                            <span>
+                                <strong>Declining</strong> population
+                            </span>
+
+                            <a href="#support">Learn more →</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONSERVATION ================= -->
+
+        <section class="conservation-section" id="conservation">
+
+            <div class="conservation-image">
+
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+                    alt="Wildlife landscape">
+
+            </div>
+
+            <div class="conservation-content">
+
+                <span class="section-label">
+                    CONSERVATION IN ACTION
+                </span>
+
+                <h2>
+                    Small actions.
+                    <em>Lasting impact.</em>
+                </h2>
+
+                <p>
+                    Wildlife conservation works when science, communities
+                    and technology come together. Our projects focus on
+                    protecting habitats and supporting the people who live
+                    alongside wildlife.
+                </p>
+
+                <div class="impact-list">
+
+                    <div class="impact-item">
+                        <span>01</span>
+                        <div>
+                            <strong>Protect habitats</strong>
+                            <p>
+                                Restore forests, wetlands and marine
+                                ecosystems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="impact-item">
+                        <span>02</span>
+                        <div>
+                            <strong>Support communities</strong>
+                            <p>
+                                Partner with local communities to create
+                                sustainable conservation solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="impact-item">
+                        <span>03</span>
+                        <div>
+                            <strong>Track wildlife</strong>
+                            <p>
+                                Use technology and research to monitor
+                                vulnerable species.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#support" class="primary-button">
+                    See Our Impact
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORIES ================= -->
+
+        <section class="stories-section" id="stories">
+
+            <div class="section-heading-centered">
+
+                <span class="section-label">WILDLIFE STORIES</span>
+
+                <h2>
+                    From the field,
+                    <em>with hope.</em>
+                </h2>
+
+                <p>
+                    Discover stories of conservationists, researchers
+                    and communities working to protect our planet.
+                </p>
+
+            </div>
+
+
+            <div class="stories-grid">
+
+                <article class="story-card large-story">
+
+                    <div class="story-image">
+
+                        <img src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1100&q=85"
+                            alt="Elephants walking">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span>CONSERVATION</span>
+
+                        <h3>
+                            Protecting elephants through
+                            community-led conservation
+                        </h3>
+
+                        <p>
+                            How local communities are helping protect
+                            elephant habitats and reduce human-wildlife
+                            conflict.
+                        </p>
+
+                        <a href="#support">Read story →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="story-card">
+
+                    <div class="story-image">
+
+                        <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?auto=format&fit=crop&w=800&q=85"
+                            alt="Wild bird">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span>RESEARCH</span>
+
+                        <h3>
+                            Technology is changing how
+                            we track endangered wildlife
+                        </h3>
+
+                        <a href="#support">Read story →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="story-card">
+
+                    <div class="story-image">
+
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=800&q=85"
+                            alt="Wild leopard">
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span>WILDLIFE</span>
+
+                        <h3>
+                            The return of a species
+                            once on the brink
+                        </h3>
+
+                        <a href="#support">Read story →</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    WHY WILDGUARD
+                </span>
+
+                <h2>
+                    Conservation needs
+                    <em>all of us.</em>
+                </h2>
+
+                <p>
+                    WildGuard is a digital wildlife platform designed
+                    to make endangered species information easier to
+                    discover and conservation easier to understand.
+                </p>
+
+                <div class="about-features">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Learn</strong>
+                        <p>
+                            Understand endangered species and the threats
+                            they face.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Discover</strong>
+                        <p>
+                            Explore wildlife stories from around the world.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Act</strong>
+                        <p>
+                            Find meaningful ways to support conservation.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-card">
+
+                <div class="about-number">98%</div>
+
+                <p>
+                    of scientists agree that biodiversity conservation
+                    is essential for healthy ecosystems.
+                </p>
+
+                <span class="about-note">
+                    Learn. Care. Protect.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUPPORT ================= -->
+
+        <section class="support-section" id="support">
+
+            <div class="support-content">
+
+                <span class="section-label">
+                    TAKE ACTION
+                </span>
+
+                <h2>
+                    The future of wildlife
+                    <em>starts with us.</em>
+                </h2>
+
+                <p>
+                    Every action matters. Learn about endangered species,
+                    share their stories and support conservation efforts.
+                </p>
+
+                <div class="support-buttons">
+
+                    <button class="primary-button" id="supportButton">
+                        Support Conservation
+                        <span>→</span>
+                    </button>
+
+                    <a href="#species" class="light-button">
+                        Explore Species
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="support-decoration">
+                <span>WILD</span>
+                <span>LIFE</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-mark">W</span>
+                    <span>WildGuard</span>
+                </a>
+
+                <p>
+                    Making wildlife conservation easier to discover,
+                    understand and support.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#species">Species</a>
+                <a href="#conservation">Conservation</a>
+                <a href="#stories">Stories</a>
+                <a href="#about">About</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Get involved</h4>
+
+                <a href="#support">Support Wildlife</a>
+                <a href="#support">Donate</a>
+                <a href="#support">Volunteer</a>
+                <a href="#support">Share</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 WildGuard. Built for wildlife awareness.
+            </span>
+
+            <span>
+                Protect. Restore. Inspire.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
