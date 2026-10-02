@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeAI | Smart Resume Checker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>Resume<span class="logo-highlight">AI</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#checker">Checker</a>
+                <a href="#features">Features</a>
+                <a href="#tips">Tips</a>
+                <a href="#how-it-works">How It Works</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                    ☾
+                </button>
+
+                <button class="mobile-menu-btn" id="menuBtn">
+                    ☰
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        AI-powered career toolkit
+                    </div>
+
+                    <h1>
+                        Make your resume
+                        <span>work harder.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Analyze your resume, discover missing skills,
+                        improve your content, and get practical suggestions
+                        to make your application stronger.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#checker" class="btn btn-primary">
+                            Check My Resume →
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            How it works
+                        </a>
+                    </div>
+
+                    <div class="trust-row">
+                        <div class="avatars">
+                            <span>PS</span>
+                            <span>AR</span>
+                            <span>KM</span>
+                            <span>+</span>
+                        </div>
+
+                        <p>
+                            Built for students, graduates & professionals
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="image-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85"
+                            alt="Professionals collaborating on career work"
+                        >
+
+                        <div class="floating-score">
+                            <div class="score-circle">
+                                <span>87</span>
+                            </div>
+
+                            <div>
+                                <small>Resume score</small>
+                                <strong>Good match</strong>
+                            </div>
+                        </div>
+
+                        <div class="floating-check">
+                            <span>✓</span>
+                            ATS friendly
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CHECKER -->
+        <section class="checker-section" id="checker">
+
+            <div class="container">
+
+                <div class="section-heading center">
+                    <span class="section-label">RESUME CHECKER</span>
+
+                    <h2>
+                        See where your resume
+                        <span>stands.</span>
+                    </h2>
+
+                    <p>
+                        Upload your resume or paste your content to receive
+                        a simulated AI-powered analysis.
+                    </p>
+                </div>
+
+
+                <div class="checker-grid">
+
+                    <!-- Upload -->
+                    <div class="upload-card">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h3>Upload your resume</h3>
+
+                        <p>
+                            Drop a PDF, DOC, or DOCX file here.
+                        </p>
+
+                        <label for="resumeFile" class="upload-btn">
+                            Choose File
+                        </label>
+
+                        <input
+                            type="file"
+                            id="resumeFile"
+                            accept=".pdf,.doc,.docx"
+                            hidden
+                        >
+
+                        <div class="file-name" id="fileName">
+                            No file selected
+                        </div>
+
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+
+                        <textarea
+                            id="resumeText"
+                            placeholder="Paste your resume text here..."
+                        ></textarea>
+
+                        <button class="analyze-btn" id="analyzeBtn">
+                            Analyze Resume
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- Results -->
+                    <div class="result-card">
+
+                        <div class="result-header">
+                            <div>
+                                <span class="section-label">SAMPLE ANALYSIS</span>
+                                <h3>Your resume health</h3>
+                            </div>
+
+                            <div class="overall-score">
+                                <strong id="scoreValue">87</strong>
+                                <span>/100</span>
+                            </div>
+                        </div>
+
+
+                        <div class="progress-bar">
+                            <div
+                                class="progress-fill"
+                                id="progressFill"
+                                style="width: 87%;"
+                            ></div>
+                        </div>
+
+
+                        <div class="metrics">
+
+                            <div class="metric">
+                                <div class="metric-top">
+                                    <span>ATS Compatibility</span>
+                                    <strong>92%</strong>
+                                </div>
+
+                                <div class="mini-bar">
+                                    <span style="width:92%;"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="metric">
+                                <div class="metric-top">
+                                    <span>Content Quality</span>
+                                    <strong>84%</strong>
+                                </div>
+
+                                <div class="mini-bar">
+                                    <span style="width:84%;"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="metric">
+                                <div class="metric-top">
+                                    <span>Skills Match</span>
+                                    <strong>81%</strong>
+                                </div>
+
+                                <div class="mini-bar">
+                                    <span style="width:81%;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="suggestions">
+
+                            <h4>Quick improvements</h4>
+
+                            <div class="suggestion success">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Strong structure</strong>
+                                    <p>Your resume has clear sections.</p>
+                                </div>
+                            </div>
+
+                            <div class="suggestion warning">
+                                <span>!</span>
+                                <div>
+                                    <strong>Add measurable results</strong>
+                                    <p>Use numbers to describe achievements.</p>
+                                </div>
+                            </div>
+
+                            <div class="suggestion warning">
+                                <span>!</span>
+                                <div>
+                                    <strong>Improve keyword coverage</strong>
+                                    <p>Add skills relevant to your target role.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features-section" id="features">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">WHAT YOU GET</span>
+
+                    <h2>
+                        More than just a
+                        <span>score.</span>
+                    </h2>
+
+                    <p>
+                        Understand what recruiters and applicant tracking
+                        systems may notice first.
+                    </p>
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">01</div>
+
+                        <div class="feature-icon">◎</div>
+
+                        <h3>ATS Readiness</h3>
+
+                        <p>
+                            Identify formatting and keyword issues that
+                            could affect automated screening.
+                        </p>
+
+                        <a href="#checker">
+                            Check compatibility →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card featured">
+
+                        <div class="feature-number">02</div>
+
+                        <div class="feature-icon">✦</div>
+
+                        <h3>Skill Analysis</h3>
+
+                        <p>
+                            Compare your listed skills with the requirements
+                            of the role you're targeting.
+                        </p>
+
+                        <a href="#checker">
+                            Find skill gaps →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">03</div>
+
+                        <div class="feature-icon">↗</div>
+
+                        <h3>Content Quality</h3>
+
+                        <p>
+                            Get suggestions for clearer, stronger,
+                            achievement-focused resume writing.
+                        </p>
+
+                        <a href="#tips">
+                            Improve your content →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- IMAGE / INSIGHT -->
+        <section class="insight-section">
+
+            <div class="container insight-grid">
+
+                <div class="insight-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+                        alt="Professional team discussing career goals"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="insight-content">
+
+                    <span class="section-label">WHY IT MATTERS</span>
+
+                    <h2>
+                        Your resume is your
+                        <span>first conversation.</span>
+                    </h2>
+
+                    <p>
+                        Recruiters often review applications quickly.
+                        A clear structure, relevant skills, and measurable
+                        achievements can make your experience easier to understand.
+                    </p>
+
+                    <div class="insight-list">
+
+                        <div>
+                            <span>01</span>
+                            <p>Keep your strongest achievements visible.</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Match keywords to the role you're applying for.</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Use concise, action-focused descriptions.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPS -->
+        <section class="tips-section" id="tips">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span class="section-label">RESUME TIPS</span>
+
+                    <h2>
+                        Small changes.
+                        <span>Better impact.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="tips-grid">
+
+                    <div class="tip-card">
+                        <span>01</span>
+                        <h3>Use action verbs</h3>
+                        <p>
+                            Start achievement statements with words like
+                            built, designed, analyzed, improved, or developed.
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span>02</span>
+                        <h3>Show measurable impact</h3>
+                        <p>
+                            Whenever possible, explain your result using
+                            numbers, percentages, time saved, or growth.
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span>03</span>
+                        <h3>Keep it focused</h3>
+                        <p>
+                            Prioritize experience and skills that are relevant
+                            to the position you want.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="how-section" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span class="section-label">HOW IT WORKS</span>
+
+                    <h2>
+                        Three steps to a
+                        <span>stronger resume.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload</h3>
+                        <p>
+                            Add your resume or paste its text into the checker.
+                        </p>
+                    </div>
+
+                    <div class="step-line"></div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Analyze</h3>
+                        <p>
+                            Review the simulated ATS, content, and skills analysis.
+                        </p>
+                    </div>
+
+                    <div class="step-line"></div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Improve</h3>
+                        <p>
+                            Apply practical suggestions before your next application.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta-section">
+
+            <div class="container cta-box">
+
+                <div>
+                    <span class="section-label">READY WHEN YOU ARE</span>
+
+                    <h2>
+                        Give your resume
+                        <span>a better chance.</span>
+                    </h2>
+                </div>
+
+                <a href="#checker" class="btn btn-light">
+                    Check My Resume →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <a href="#" class="logo">
+                    <span class="logo-icon">✦</span>
+                    Resume<span class="logo-highlight">AI</span>
+                </a>
+
+                <p>
+                    A modern resume analysis interface designed
+                    to help candidates improve their applications.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explore</h4>
+                <a href="#checker">Resume Checker</a>
+                <a href="#features">Features</a>
+                <a href="#tips">Resume Tips</a>
+            </div>
+
+            <div>
+                <h4>Project</h4>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Technology</a>
+                <a href="#">Privacy</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 ResumeAI. Built for the Modern UI Template Hackathon.</p>
+            <span>HTML • CSS • JavaScript</span>
+        </div>
+
+    </footer>
+
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

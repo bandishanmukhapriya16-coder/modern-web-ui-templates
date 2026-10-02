@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SoilSense | Smart Soil Monitor</title>
+
+    <meta
+        name="description"
+        content="SoilSense is a modern soil monitoring dashboard for understanding moisture, temperature, pH and plant conditions."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">S</span>
+            <span>
+                <strong>SoilSense</strong>
+                <small>Smart Soil Monitor</small>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#sensor">Sensor</a>
+            <a href="#plants">Plants</a>
+            <a href="#insights">Insights</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                class="theme-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+            >
+                ◐
+            </button>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                🌱 SMART GARDENING
+            </span>
+
+            <h1>
+                Understand your soil.
+                <span>Grow with confidence.</span>
+            </h1>
+
+            <p>
+                Monitor soil moisture, temperature, pH and light conditions
+                from one simple gardening dashboard.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" id="checkSoilBtn">
+                    Check Soil
+                    <span>→</span>
+                </button>
+
+                <a href="#sensor" class="secondary-btn">
+                    Explore Sensor
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+                <span class="status-dot"></span>
+                Monitoring your garden conditions
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-card">
+
+            <img
+                src="https://www.vegogarden.com/cdn/shop/articles/Soil_Moisture_Meter.jpg?v=1713276724"
+                alt="Real soil moisture meter being used in a vegetable garden"
+                class="hero-image"
+                onerror="imageFallback(this)"
+            >
+
+            <div class="image-overlay">
+
+                <div>
+                    <span>SOIL MOISTURE</span>
+                    <strong id="heroMoisture">68%</strong>
+                </div>
+
+                <div class="mini-status">
+                    <span class="status-dot"></span>
+                    Healthy
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="section" id="dashboard">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="eyebrow">LIVE DASHBOARD</span>
+
+                <h2>Your garden at a glance</h2>
+
+                <p>
+                    A simple overview of your current soil conditions.
+                </p>
+            </div>
+
+            <button class="outline-btn" id="refreshBtn">
+                ↻ Refresh Data
+            </button>
+
+        </div>
+
+
+        <div class="metrics-grid">
+
+            <article class="metric-card moisture-card">
+
+                <div class="metric-top">
+                    <span class="metric-icon">💧</span>
+                    <span class="metric-status good">GOOD</span>
+                </div>
+
+                <p>Soil Moisture</p>
+
+                <div class="metric-value">
+                    <strong id="moistureValue">68</strong>
+                    <span>%</span>
+                </div>
+
+                <div class="progress">
+                    <span id="moistureBar" style="width:68%"></span>
+                </div>
+
+                <small>Ideal range: 50–75%</small>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-icon">🌡️</span>
+                    <span class="metric-status good">GOOD</span>
+                </div>
+
+                <p>Soil Temperature</p>
+
+                <div class="metric-value">
+                    <strong id="temperatureValue">24</strong>
+                    <span>°C</span>
+                </div>
+
+                <div class="progress">
+                    <span style="width:72%"></span>
+                </div>
+
+                <small>Comfortable for most plants</small>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-icon">⚗️</span>
+                    <span class="metric-status neutral">BALANCED</span>
+                </div>
+
+                <p>Soil pH</p>
+
+                <div class="metric-value">
+                    <strong id="phValue">6.5</strong>
+                </div>
+
+                <div class="ph-scale">
+                    <span>Acidic</span>
+                    <span>Neutral</span>
+                    <span>Alkaline</span>
+                </div>
+
+                <div class="ph-line">
+                    <span></span>
+                </div>
+
+                <small>Suitable for many garden plants</small>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-top">
+                    <span class="metric-icon">☀️</span>
+                    <span class="metric-status good">GOOD</span>
+                </div>
+
+                <p>Light Exposure</p>
+
+                <div class="metric-value">
+                    <strong>7.2</strong>
+                    <span>hrs</span>
+                </div>
+
+                <div class="progress">
+                    <span style="width:76%"></span>
+                </div>
+
+                <small>Daily sunlight exposure</small>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SENSOR ================= -->
+
+<section class="section sensor-section" id="sensor">
+
+    <div class="container sensor-grid">
+
+        <div class="sensor-image-wrapper">
+
+            <img
+                src="https://www.agrifarming.in/wp-content/uploads/Importance-of-Soil-Moisture-Sensors-in-Agriculture2.jpg"
+                alt="Real digital soil moisture meter being used in soil"
+                class="large-image"
+                loading="lazy"
+                onerror="imageFallback(this)"
+            >
+
+            <div class="image-badge">
+                <span>●</span>
+                Real sensor example
+            </div>
+
+        </div>
+
+
+        <div class="sensor-content">
+
+            <span class="eyebrow">THE SENSOR</span>
+
+            <h2>
+                Know what is happening
+                beneath the surface.
+            </h2>
+
+            <p>
+                Soil moisture sensors measure the amount of water available
+                in soil. They can help gardeners decide when plants may need
+                attention instead of relying only on visual signs.
+            </p>
+
+            <div class="sensor-features">
+
+                <div class="feature-row">
+                    <span>01</span>
+                    <div>
+                        <strong>Moisture detection</strong>
+                        <p>Understand whether soil is dry or adequately moist.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <span>02</span>
+                    <div>
+                        <strong>Plant monitoring</strong>
+                        <p>Compare conditions across different plants.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <span>03</span>
+                    <div>
+                        <strong>Better watering decisions</strong>
+                        <p>Reduce unnecessary watering by checking the soil first.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="primary-btn" id="runCheckBtn">
+                Run Soil Check →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REAL SENSOR GALLERY ================= -->
+
+<section class="section gallery-section">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <div>
+                <span class="eyebrow">REAL WORLD</span>
+
+                <h2>Soil monitoring in action</h2>
+
+                <p>
+                    Real photographs showing different soil-monitoring devices.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <article class="gallery-card">
+
+                <img
+                    src="https://www.vegogarden.com/cdn/shop/articles/Soil_Moisture_Meter.jpg?v=1713276724"
+                    alt="Moisture meter inserted into garden soil"
+                    loading="lazy"
+                    onerror="imageFallback(this)"
+                >
+
+                <div class="gallery-info">
+                    <span>01</span>
+                    <h3>Garden moisture meter</h3>
+                    <p>Manual moisture measurement in garden soil.</p>
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <img
+                    src="https://www.inserv.lv/storage/products/gallery/large/a8/a8ee563e-330a-42c2-9d94-8a9f1a203de3.jpg"
+                    alt="Gardena soil moisture sensor in a flower garden"
+                    loading="lazy"
+                    onerror="imageFallback(this)"
+                >
+
+                <div class="gallery-info">
+                    <span>02</span>
+                    <h3>Garden sensor</h3>
+                    <p>Soil sensor installed among flowering plants.</p>
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <img
+                    src="https://paradehomeandgarden.com/.image/NjowMDAwMDAwMDAwNTc1MjA3/man-gardener-using-soil-testing-device-in-greenhouse-farmer-measuring-soil-moisture-cropped-photo-stockpack-gettyimages.jpg?io=1&profile=w2560&x=0&y=0"
+                    alt="Gardener measuring soil moisture in a garden"
+                    loading="lazy"
+                    onerror="imageFallback(this)"
+                >
+
+                <div class="gallery-info">
+                    <span>03</span>
+                    <h3>Soil testing</h3>
+                    <p>A sensor being inserted into garden soil.</p>
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <img
+                    src="https://g-shop.com.ua/image/cache/catalog/2024/new1/01867-20/01867-20-11-700x700.jpg"
+                    alt="Soil moisture sensor installed in a vegetable garden"
+                    loading="lazy"
+                    onerror="imageFallback(this)"
+                >
+
+                <div class="gallery-info">
+                    <span>04</span>
+                    <h3>Vegetable garden</h3>
+                    <p>Sensor positioned near growing vegetables.</p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PLANTS ================= -->
+
+<section class="section" id="plants">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="eyebrow">YOUR PLANTS</span>
+
+                <h2>Monitor every growing space</h2>
+
+                <p>
+                    Keep an eye on the plants that matter most.
+                </p>
+            </div>
+
+            <button class="outline-btn" id="addPlantBtn">
+                + Add Plant
+            </button>
+
+        </div>
+
+
+        <div class="plants-grid">
+
+            <article class="plant-card">
+
+                <div class="plant-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Monstera plant"
+                        loading="lazy"
+                        onerror="imageFallback(this)"
+                    >
+
+                    <button class="favorite-btn">♡</button>
+
+                    <span class="plant-label">Indoor</span>
+
+                </div>
+
+                <div class="plant-body">
+
+                    <div class="plant-title">
+                        <div>
+                            <h3>Monstera</h3>
+                            <span>Living Room</span>
+                        </div>
+
+                        <strong>72%</strong>
+                    </div>
+
+                    <div class="plant-progress">
+                        <span style="width:72%"></span>
+                    </div>
+
+                    <div class="plant-meta">
+                        <span>💧 Moisture good</span>
+                        <span>☀️ Medium light</span>
+                    </div>
+
+                    <button class="plant-btn">
+                        View details →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="plant-card">
+
+                <div class="plant-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=1000&q=85"
+                        alt="Calathea plant"
+                        loading="lazy"
+                        onerror="imageFallback(this)"
+                    >
+
+                    <button class="favorite-btn">♡</button>
+
+                    <span class="plant-label">Indoor</span>
+
+                </div>
+
+                <div class="plant-body">
+
+                    <div class="plant-title">
+                        <div>
+                            <h3>Calathea</h3>
+                            <span>Bedroom</span>
+                        </div>
+
+                        <strong>61%</strong>
+                    </div>
+
+                    <div class="plant-progress">
+                        <span style="width:61%"></span>
+                    </div>
+
+                    <div class="plant-meta">
+                        <span>💧 Moisture good</span>
+                        <span>☁️ Low light</span>
+                    </div>
+
+                    <button class="plant-btn">
+                        View details →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="plant-card">
+
+                <div class="plant-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=85"
+                        alt="Fresh herb garden"
+                        loading="lazy"
+                        onerror="imageFallback(this)"
+                    >
+
+                    <button class="favorite-btn">♡</button>
+
+                    <span class="plant-label">Outdoor</span>
+
+                </div>
+
+                <div class="plant-body">
+
+                    <div class="plant-title">
+                        <div>
+                            <h3>Herb Garden</h3>
+                            <span>Kitchen Garden</span>
+                        </div>
+
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="plant-progress">
+                        <span style="width:68%"></span>
+                    </div>
+
+                    <div class="plant-meta">
+                        <span>💧 Moisture good</span>
+                        <span>☀️ High light</span>
+                    </div>
+
+                    <button class="plant-btn">
+                        View details →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK CHECK ================= -->
+
+<section class="section quick-section">
+
+    <div class="container quick-grid">
+
+        <div class="quick-content">
+
+            <span class="eyebrow">QUICK SOIL CHECK</span>
+
+            <h2>
+                Is your soil ready for another watering?
+            </h2>
+
+            <p>
+                Use the simulated dashboard reading below to understand
+                how a soil-monitoring interface can communicate moisture status.
+            </p>
+
+            <button class="primary-btn" id="quickCheckBtn">
+                Check Again →
+            </button>
+
+        </div>
+
+
+        <div class="soil-meter">
+
+            <div class="meter-ring">
+
+                <div class="meter-center">
+
+                    <strong id="meterValue">68%</strong>
+
+                    <span>Moisture</span>
+
+                </div>
+
+            </div>
+
+            <div class="meter-status">
+                <span class="status-dot"></span>
+                Soil condition looks healthy
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INSIGHTS ================= -->
+
+<section class="section" id="insights">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <div>
+
+                <span class="eyebrow">GARDEN INSIGHTS</span>
+
+                <h2>Simple information. Better decisions.</h2>
+
+                <p>
+                    Understand what your soil readings mean for everyday gardening.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="insights-grid">
+
+            <article class="insight-card">
+
+                <span class="insight-number">01</span>
+
+                <span class="insight-icon">💧</span>
+
+                <h3>Moisture</h3>
+
+                <p>
+                    Moisture readings can help identify when soil is becoming
+                    too dry or staying wet for too long.
+                </p>
+
+                <a href="#sensor">Learn more →</a>
+
+            </article>
+
+
+            <article class="insight-card">
+
+                <span class="insight-number">02</span>
+
+                <span class="insight-icon">⚗️</span>
+
+                <h3>pH Balance</h3>
+
+                <p>
+                    Soil pH affects nutrient availability and varies according
+                    to plant type and growing environment.
+                </p>
+
+                <a href="#dashboard">View reading →</a>
+
+            </article>
+
+
+            <article class="insight-card">
+
+                <span class="insight-number">03</span>
+
+                <span class="insight-icon">☀️</span>
+
+                <h3>Light</h3>
+
+                <p>
+                    Combining soil information with light exposure creates
+                    a broader picture of plant growing conditions.
+                </p>
+
+                <a href="#plants">View plants →</a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://garden-mind.com/images/blog/moisture-test-for-soil-section-3.jpg"
+                alt="Real moisture meter used in a potted plant"
+                loading="lazy"
+                onerror="imageFallback(this)"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="eyebrow">ABOUT SOILSENSE</span>
+
+            <h2>
+                A cleaner way to understand your garden.
+            </h2>
+
+            <p>
+                SoilSense demonstrates how modern gardening dashboards can
+                combine sensor information, plant profiles and simple visual
+                feedback in one responsive interface.
+            </p>
+
+            <div class="about-list">
+
+                <div>
+                    <span>✓</span>
+                    Responsive interface
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Soil monitoring dashboard
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Plant management
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Interactive JavaScript
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <span class="eyebrow">GROW SMARTER</span>
+
+            <h2>
+                Start paying attention to what's beneath the surface.
+            </h2>
+
+        </div>
+
+        <button class="light-btn" id="ctaBtn">
+            Run Soil Check →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+
+                <span class="logo-icon">S</span>
+
+                <span>
+                    <strong>SoilSense</strong>
+                    <small>Smart Soil Monitor</small>
+                </span>
+
+            </a>
+
+            <p>
+                A modern UI template for smart gardening and soil monitoring.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Explore</h4>
+
+            <a href="#dashboard">Dashboard</a>
+            <a href="#sensor">Sensor</a>
+            <a href="#plants">Plants</a>
+            <a href="#insights">Insights</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Technology</h4>
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive UI</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>© 2026 SoilSense</span>
+
+        <span>
+            Front-end demonstration • Readings are simulated
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= ADD PLANT MODAL ================= -->
+
+<div class="modal" id="plantModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" id="closeModal">
+            ×
+        </button>
+
+        <span class="eyebrow">NEW PLANT</span>
+
+        <h2>Add a plant</h2>
+
+        <p>
+            Add a plant to your SoilSense dashboard.
+        </p>
+
+        <form id="plantForm">
+
+            <label>
+                Plant name
+                <input
+                    type="text"
+                    id="plantName"
+                    placeholder="e.g. Basil"
+                    required
+                >
+            </label>
+
+            <label>
+                Location
+                <input
+                    type="text"
+                    id="plantLocation"
+                    placeholder="e.g. Balcony"
+                    required
+                >
+            </label>
+
+            <button class="primary-btn" type="submit">
+                Add Plant
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+
+    <span>✓</span>
+
+    <p id="toastMessage">
+        Soil data refreshed.
+    </p>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
