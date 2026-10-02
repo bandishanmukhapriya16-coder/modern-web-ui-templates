@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloomly | Flowers Made Beautiful</title>
+
+    <meta
+        name="description"
+        content="Bloomly is a modern flower and gifting experience for birthdays, celebrations and everyday moments."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </span>
+                Bloomly
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#collections">Flowers</a>
+                <a href="#occasions">Occasions</a>
+                <a href="#about">Our Story</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="searchBtn" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="icon-btn" id="themeBtn" title="Toggle theme">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ================= SEARCH PANEL ================= -->
+
+    <div class="search-panel" id="searchPanel">
+        <div class="search-inner">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search roses, bouquets, gifts..."
+                >
+
+                <button id="closeSearch">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    <i class="fa-solid fa-sparkles"></i>
+                    Flowers for every feeling
+                </span>
+
+                <h1>
+                    Let your moments
+                    <span>bloom.</span>
+                </h1>
+
+                <p>
+                    Thoughtfully arranged flowers, beautiful gifts and
+                    little surprises designed to make ordinary days memorable.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#collections" class="btn btn-primary">
+                        Explore flowers
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <button class="btn btn-outline" id="surpriseBtn">
+                        Surprise me
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </button>
+                </div>
+
+                <div class="hero-features">
+
+                    <div>
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Same-day delivery</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Freshly arranged</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Made with care</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories section" id="occasions">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">Find your feeling</span>
+                    <h2>Flowers for every occasion</h2>
+                </div>
+
+                <p>
+                    Whether you're celebrating, thanking or simply thinking
+                    of someone, there's a bloom for it.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <button class="category-card" data-category="Birthday">
+                    <span class="category-icon pink">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </span>
+                    <strong>Birthday</strong>
+                    <small>Make their day brighter</small>
+                </button>
+
+                <button class="category-card" data-category="Love">
+                    <span class="category-icon red">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <strong>Love</strong>
+                    <small>Say it with flowers</small>
+                </button>
+
+                <button class="category-card" data-category="Thank You">
+                    <span class="category-icon yellow">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </span>
+                    <strong>Thank you</strong>
+                    <small>A thoughtful little gesture</small>
+                </button>
+
+                <button class="category-card" data-category="Celebration">
+                    <span class="category-icon purple">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </span>
+                    <strong>Celebration</strong>
+                    <small>Bring the party to life</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COLLECTIONS ================= -->
+
+        <section class="collections section" id="collections">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">Our favourites</span>
+                    <h2>Made to make them smile</h2>
+                </div>
+
+                <button class="text-btn" id="viewAllBtn">
+                    View all
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- PRODUCT 1 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=85"
+                            alt="Beautiful pink flowers"
+                        >
+
+                        <span class="product-badge">Bestseller</span>
+
+                        <button
+                            class="heart-btn"
+                            data-product="Blush Garden"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-type">Fresh flowers</span>
+
+                        <h3>Blush Garden</h3>
+
+                        <p>
+                            Soft pink blooms with delicate greenery.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,499</strong>
+
+                            <button
+                                class="add-btn"
+                                data-product="Blush Garden"
+                            >
+                                Add
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&w=1000&q=85"
+                            alt="Colorful flower arrangement"
+                        >
+
+                        <span class="product-badge">Fresh pick</span>
+
+                        <button
+                            class="heart-btn"
+                            data-product="Sunshine Mix"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-type">Flower arrangement</span>
+
+                        <h3>Sunshine Mix</h3>
+
+                        <p>
+                            Bright seasonal flowers full of energy.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,799</strong>
+
+                            <button
+                                class="add-btn"
+                                data-product="Sunshine Mix"
+                            >
+                                Add
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1000&q=85"
+                            alt="Red roses bouquet"
+                        >
+
+                        <span class="product-badge">Romantic</span>
+
+                        <button
+                            class="heart-btn"
+                            data-product="Forever Roses"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-type">Rose bouquet</span>
+
+                        <h3>Forever Roses</h3>
+
+                        <p>
+                            Classic roses for unforgettable moments.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,999</strong>
+
+                            <button
+                                class="add-btn"
+                                data-product="Forever Roses"
+                            >
+                                Add
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85"
+                            alt="Elegant white flowers"
+                        >
+
+                        <span class="product-badge">New</span>
+
+                        <button
+                            class="heart-btn"
+                            data-product="Pure Elegance"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-type">Premium bouquet</span>
+
+                        <h3>Pure Elegance</h3>
+
+                        <p>
+                            A graceful arrangement for meaningful moments.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹2,299</strong>
+
+                            <button
+                                class="add-btn"
+                                data-product="Pure Elegance"
+                            >
+                                Add
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORY ================= -->
+
+        <section class="story section" id="about">
+
+            <div class="story-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&w=1200&q=85"
+                    alt="Fresh flowers arranged beautifully"
+                >
+
+                <div class="story-card">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <strong>Freshness first</strong>
+
+                    <span>
+                        Carefully selected blooms
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="story-content">
+
+                <span class="section-label">Our story</span>
+
+                <h2>
+                    More than flowers.
+                    <span>It's a feeling.</span>
+                </h2>
+
+                <p>
+                    Bloomly started with one simple idea:
+                    flowers should feel personal.
+                </p>
+
+                <p>
+                    Every arrangement is thoughtfully designed to help
+                    people celebrate the little moments, the big milestones
+                    and everything in between.
+                </p>
+
+                <div class="story-stats">
+
+                    <div>
+                        <strong>10K+</strong>
+                        <span>Happy customers</span>
+                    </div>
+
+                    <div>
+                        <strong>50+</strong>
+                        <span>Flower varieties</span>
+                    </div>
+
+                    <div>
+                        <strong>4.9</strong>
+                        <span>Customer rating</span>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-dark" id="storyBtn">
+                    Discover Bloomly
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMISE ================= -->
+
+        <section class="promise section">
+
+            <div class="promise-heading">
+                <span class="section-label">The Bloomly promise</span>
+
+                <h2>
+                    Beautifully simple.
+                    <br>
+                    Thoughtfully delivered.
+                </h2>
+            </div>
+
+
+            <div class="promise-grid">
+
+                <div class="promise-card">
+                    <span>01</span>
+                    <i class="fa-solid fa-flower"></i>
+                    <h3>Fresh blooms</h3>
+                    <p>
+                        Flowers are selected for freshness and arranged
+                        with care.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <span>02</span>
+                    <i class="fa-solid fa-box-open"></i>
+                    <h3>Beautifully packed</h3>
+                    <p>
+                        Every order arrives ready to make someone's day.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <span>03</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Reliable delivery</h3>
+                    <p>
+                        Track your order from our studio to their doorstep.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta" id="contact">
+
+            <div class="cta-content">
+
+                <span class="section-label">A little something special</span>
+
+                <h2>
+                    Send a little
+                    <span>happiness.</span>
+                </h2>
+
+                <p>
+                    Flowers don't need a reason.
+                    But they always make one.
+                </p>
+
+                <button class="btn btn-white" id="ctaBtn">
+                    Start gifting
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART SIDEBAR ================= -->
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+
+            <div>
+                <span class="section-label">Your bag</span>
+                <h2>Bloom basket</h2>
+            </div>
+
+            <button id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <h3>Your basket is empty</h3>
+
+                <p>
+                    Add a beautiful bouquet to get started.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Continue to checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast">
+
+        <span class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </span>
+
+        <div>
+            <strong id="toastTitle">Added to bag</strong>
+            <p id="toastMessage">Your item was added successfully.</p>
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </span>
+                    Bloomly
+                </a>
+
+                <p>
+                    Flowers, gifts and little moments
+                    made beautiful.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#collections">Flowers</a>
+                <a href="#occasions">Occasions</a>
+                <a href="#about">Our Story</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Help</h4>
+
+                <a href="#" data-footer="Delivery information">Delivery</a>
+                <a href="#" data-footer="Order tracking">Track order</a>
+                <a href="#" data-footer="Returns and support">Returns</a>
+                <a href="#" data-footer="Frequently asked questions">FAQs</a>
+
+            </div>
+
+
+            <div class="footer-column newsletter">
+
+                <h4>Stay in bloom</h4>
+
+                <p>
+                    Get flower inspiration and special offers.
+                </p>
+
+                <form id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Bloomly. All rights reserved.
+            </span>
+
+            <span>
+                Made with <i class="fa-solid fa-heart"></i> for flower lovers.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
