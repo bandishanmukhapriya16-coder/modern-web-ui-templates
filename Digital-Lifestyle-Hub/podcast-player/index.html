@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EchoPod | Podcast Player</title>
+
+    <meta name="description"
+        content="EchoPod is a modern podcast discovery and listening platform. Discover shows, explore episodes and listen anywhere.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">◉</span>
+            <span>Echo<span class="logo-highlight">Pod</span></span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+            <a href="#discover">Discover</a>
+            <a href="#categories">Categories</a>
+            <a href="#episodes">Episodes</a>
+            <a href="#hosts">Hosts</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span id="themeIcon">☾</span>
+            </button>
+
+            <a href="#library" class="library-btn">
+                ♡ Library
+            </a>
+
+            <a href="#subscribe" class="subscribe-btn">
+                Subscribe
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span></span>
+                    YOUR DAILY AUDIO DESTINATION
+                </div>
+
+                <h1>
+                    Stories worth
+                    <span>listening to.</span>
+                </h1>
+
+                <p>
+                    Discover thoughtful conversations, inspiring stories,
+                    and ideas from creators around the world.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#discover" class="primary-btn">
+                        Explore Podcasts
+                        <span>→</span>
+                    </a>
+
+                    <a href="#episodes" class="secondary-btn">
+                        Browse Episodes
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>12K+</strong>
+                        <span>Episodes</span>
+                    </div>
+
+                    <div>
+                        <strong>850+</strong>
+                        <span>Shows</span>
+                    </div>
+
+                    <div>
+                        <strong>48K+</strong>
+                        <span>Listeners</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-player-card">
+
+                <div class="hero-artwork">
+
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=85"
+                        alt="Podcast microphone">
+
+                    <div class="artwork-overlay">
+                        <span>NOW PLAYING</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-player-info">
+
+                    <span class="small-label">FEATURED EPISODE</span>
+
+                    <h3>The Art of Starting Again</h3>
+
+                    <p>Mindful Minutes · Episode 42</p>
+
+                    <div class="waveform">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="hero-player-controls">
+
+                        <span>18:42</span>
+
+                        <button class="hero-play" onclick="playFeaturedEpisode()">
+                            ▶
+                        </button>
+
+                        <span>42:16</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SEARCH
+        ====================================================== -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="podcastSearch"
+                    placeholder="Search podcasts, episodes or creators..."
+                >
+
+                <button onclick="searchPodcasts()">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DISCOVER SECTION
+        ====================================================== -->
+
+        <section class="section discover-section" id="discover">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">DISCOVER</span>
+
+                    <h2>
+                        Something new
+                        <span>to hear.</span>
+                    </h2>
+                </div>
+
+                <a href="#episodes" class="view-all">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="featured-grid">
+
+                <article class="featured-card large-feature">
+
+                    <div class="featured-image">
+
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1000&q=85"
+                            alt="Podcast recording">
+
+                        <span class="featured-tag">
+                            EDITOR'S PICK
+                        </span>
+
+                    </div>
+
+                    <div class="featured-content">
+
+                        <span class="category-label">
+                            CULTURE
+                        </span>
+
+                        <h3>
+                            Conversations That Change The Way We Think
+                        </h3>
+
+                        <p>
+                            A thoughtful conversation about creativity,
+                            culture and the ideas shaping our everyday lives.
+                        </p>
+
+                        <div class="card-meta">
+
+                            <span>52 min</span>
+                            <span>•</span>
+                            <span>Today</span>
+
+                            <button
+                                class="small-play"
+                                onclick="playEpisode(
+                                    'Conversations That Change The Way We Think',
+                                    'The Open Room'
+                                )">
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <div class="side-featured">
+
+                    <article class="mini-feature">
+
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=500&q=80"
+                            alt="Podcast host">
+
+                        <div>
+
+                            <span class="category-label">
+                                BUSINESS
+                            </span>
+
+                            <h3>
+                                Building Products People Love
+                            </h3>
+
+                            <p>34 min · 2 days ago</p>
+
+                            <button
+                                class="text-play"
+                                onclick="playEpisode(
+                                    'Building Products People Love',
+                                    'The Product Room'
+                                )">
+                                ▶ Play episode
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="mini-feature">
+
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=500&q=80"
+                            alt="Music and podcast">
+
+                        <div>
+
+                            <span class="category-label">
+                                MUSIC
+                            </span>
+
+                            <h3>
+                                Behind The Sound
+                            </h3>
+
+                            <p>28 min · 4 days ago</p>
+
+                            <button
+                                class="text-play"
+                                onclick="playEpisode(
+                                    'Behind The Sound',
+                                    'Sound Stories'
+                                )">
+                                ▶ Play episode
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATEGORIES
+        ====================================================== -->
+
+        <section class="section categories-section" id="categories">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        EXPLORE BY TOPIC
+                    </span>
+
+                    <h2>
+                        Find your
+                        <span>kind of story.</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="#episodes" class="category-card category-orange">
+                    <span class="category-icon">◉</span>
+                    <strong>Technology</strong>
+                    <small>124 shows</small>
+                </a>
+
+                <a href="#episodes" class="category-card category-purple">
+                    <span class="category-icon">✦</span>
+                    <strong>Culture</strong>
+                    <small>98 shows</small>
+                </a>
+
+                <a href="#episodes" class="category-card category-green">
+                    <span class="category-icon">♧</span>
+                    <strong>Wellness</strong>
+                    <small>86 shows</small>
+                </a>
+
+                <a href="#episodes" class="category-card category-blue">
+                    <span class="category-icon">◌</span>
+                    <strong>Business</strong>
+                    <small>142 shows</small>
+                </a>
+
+                <a href="#episodes" class="category-card category-pink">
+                    <span class="category-icon">♡</span>
+                    <strong>Relationships</strong>
+                    <small>76 shows</small>
+                </a>
+
+                <a href="#episodes" class="category-card category-yellow">
+                    <span class="category-icon">♫</span>
+                    <strong>Music</strong>
+                    <small>115 shows</small>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             POPULAR EPISODES
+        ====================================================== -->
+
+        <section class="section episodes-section" id="episodes">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        TRENDING NOW
+                    </span>
+
+                    <h2>
+                        Popular
+                        <span>episodes.</span>
+                    </h2>
+
+                </div>
+
+                <div class="episode-filter">
+
+                    <button class="filter active">
+                        All
+                    </button>
+
+                    <button class="filter">
+                        Technology
+                    </button>
+
+                    <button class="filter">
+                        Business
+                    </button>
+
+                    <button class="filter">
+                        Wellness
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="episode-list">
+
+
+                <article class="episode-card">
+
+                    <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=500&q=80"
+                        alt="Podcast microphone">
+
+                    <div class="episode-details">
+
+                        <span class="category-label">
+                            TECHNOLOGY
+                        </span>
+
+                        <h3>
+                            What Comes After The AI Revolution?
+                        </h3>
+
+                        <p>
+                            Future Forward · Episode 86
+                        </p>
+
+                        <div class="episode-meta">
+                            48 min · Sep 28, 2026
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="episode-play"
+                        onclick="playEpisode(
+                            'What Comes After The AI Revolution?',
+                            'Future Forward'
+                        )">
+                        ▶
+                    </button>
+
+                    <button class="save-button" onclick="saveEpisode(this)">
+                        ♡
+                    </button>
+
+                </article>
+
+
+                <article class="episode-card">
+
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=500&q=80"
+                        alt="Microphone">
+
+                    <div class="episode-details">
+
+                        <span class="category-label">
+                            WELLNESS
+                        </span>
+
+                        <h3>
+                            How To Build A Better Morning
+                        </h3>
+
+                        <p>
+                            Mindful Minutes · Episode 42
+                        </p>
+
+                        <div class="episode-meta">
+                            31 min · Sep 26, 2026
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="episode-play"
+                        onclick="playEpisode(
+                            'How To Build A Better Morning',
+                            'Mindful Minutes'
+                        )">
+                        ▶
+                    </button>
+
+                    <button class="save-button" onclick="saveEpisode(this)">
+                        ♡
+                    </button>
+
+                </article>
+
+
+                <article class="episode-card">
+
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80"
+                        alt="People talking">
+
+                    <div class="episode-details">
+
+                        <span class="category-label">
+                            CULTURE
+                        </span>
+
+                        <h3>
+                            The Power Of Meaningful Conversations
+                        </h3>
+
+                        <p>
+                            The Open Room · Episode 19
+                        </p>
+
+                        <div class="episode-meta">
+                            42 min · Sep 24, 2026
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="episode-play"
+                        onclick="playEpisode(
+                            'The Power Of Meaningful Conversations',
+                            'The Open Room'
+                        )">
+                        ▶
+                    </button>
+
+                    <button class="save-button" onclick="saveEpisode(this)">
+                        ♡
+                    </button>
+
+                </article>
+
+
+                <article class="episode-card">
+
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=80"
+                        alt="Business discussion">
+
+                    <div class="episode-details">
+
+                        <span class="category-label">
+                            BUSINESS
+                        </span>
+
+                        <h3>
+                            From Small Idea To Big Business
+                        </h3>
+
+                        <p>
+                            The Product Room · Episode 64
+                        </p>
+
+                        <div class="episode-meta">
+                            39 min · Sep 22, 2026
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="episode-play"
+                        onclick="playEpisode(
+                            'From Small Idea To Big Business',
+                            'The Product Room'
+                        )">
+                        ▶
+                    </button>
+
+                    <button class="save-button" onclick="saveEpisode(this)">
+                        ♡
+                    </button>
+
+                </article>
+
+
+                <article class="episode-card">
+
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80"
+                        alt="Live music">
+
+                    <div class="episode-details">
+
+                        <span class="category-label">
+                            MUSIC
+                        </span>
+
+                        <h3>
+                            How A Song Becomes A Hit
+                        </h3>
+
+                        <p>
+                            Sound Stories · Episode 27
+                        </p>
+
+                        <div class="episode-meta">
+                            36 min · Sep 20, 2026
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="episode-play"
+                        onclick="playEpisode(
+                            'How A Song Becomes A Hit',
+                            'Sound Stories'
+                        )">
+                        ▶
+                    </button>
+
+                    <button class="save-button" onclick="saveEpisode(this)">
+                        ♡
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HOSTS
+        ====================================================== -->
+
+        <section class="section hosts-section" id="hosts">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MEET THE CREATORS
+                    </span>
+
+                    <h2>
+                        Voices behind
+                        <span>the stories.</span>
+                    </h2>
+
+                </div>
+
+                <a href="#subscribe" class="view-all">
+                    Follow creators →
+                </a>
+
+            </div>
+
+
+            <div class="hosts-grid">
+
+                <article class="host-card">
+
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
+                        alt="Podcast host">
+
+                    <div>
+
+                        <h3>Emma Wilson</h3>
+                        <p>Mindful Minutes</p>
+
+                        <span>
+                            128K listeners
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="host-card">
+
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+                        alt="Podcast host">
+
+                    <div>
+
+                        <h3>Daniel Carter</h3>
+                        <p>Future Forward</p>
+
+                        <span>
+                            94K listeners
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="host-card">
+
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80"
+                        alt="Podcast host">
+
+                    <div>
+
+                        <h3>Sophia Morgan</h3>
+                        <p>The Open Room</p>
+
+                        <span>
+                            76K listeners
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="host-card">
+
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80"
+                        alt="Podcast host">
+
+                    <div>
+
+                        <h3>Alex Parker</h3>
+                        <p>The Product Room</p>
+
+                        <span>
+                            61K listeners
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LIBRARY
+        ====================================================== -->
+
+        <section class="library-section" id="library">
+
+            <div class="library-content">
+
+                <span class="eyebrow">
+                    YOUR LIBRARY
+                </span>
+
+                <h2>
+                    Keep every
+                    <span>great episode.</span>
+                </h2>
+
+                <p>
+                    Save your favourite shows and episodes in one place.
+                    Pick up exactly where you left off whenever you return.
+                </p>
+
+                <div class="library-features">
+
+                    <span>✓ Saved episodes</span>
+                    <span>✓ Continue listening</span>
+                    <span>✓ Personal playlists</span>
+
+                </div>
+
+                <a href="#episodes" class="primary-btn">
+                    Start Building Your Library →
+                </a>
+
+            </div>
+
+            <div class="library-visual">
+
+                <div class="library-card">
+
+                    <span>YOUR LIBRARY</span>
+
+                    <div class="library-item">
+
+                        <div class="library-art">🎙️</div>
+
+                        <div>
+                            <strong>The Open Room</strong>
+                            <small>12 saved episodes</small>
+                        </div>
+
+                        <span>→</span>
+
+                    </div>
+
+                    <div class="library-item">
+
+                        <div class="library-art purple">♫</div>
+
+                        <div>
+                            <strong>Sound Stories</strong>
+                            <small>8 saved episodes</small>
+                        </div>
+
+                        <span>→</span>
+
+                    </div>
+
+                    <div class="library-item">
+
+                        <div class="library-art green">✦</div>
+
+                        <div>
+                            <strong>Mindful Minutes</strong>
+                            <small>16 saved episodes</small>
+                        </div>
+
+                        <span>→</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SUBSCRIBE
+        ====================================================== -->
+
+        <section class="subscribe-section" id="subscribe">
+
+            <div>
+
+                <span class="eyebrow">
+                    STAY IN THE LOOP
+                </span>
+
+                <h2>
+                    Never miss a
+                    <span>good story.</span>
+                </h2>
+
+                <p>
+                    Get our weekly selection of the most interesting
+                    episodes delivered straight to your inbox.
+                </p>
+
+            </div>
+
+            <form id="subscribeForm">
+
+                <input
+                    type="email"
+                    id="subscribeEmail"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe →
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FIXED AUDIO PLAYER
+    ====================================================== -->
+
+    <div class="audio-player" id="audioPlayer">
+
+        <div class="player-track">
+
+            <div class="player-art">
+                🎙️
+            </div>
+
+            <div class="player-info">
+
+                <strong id="playerTitle">
+                    Choose an episode
+                </strong>
+
+                <span id="playerPodcast">
+                    EchoPod
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="player-main">
+
+            <div class="player-buttons">
+
+                <button onclick="skipBackward()">
+                    ↶
+                </button>
+
+                <button
+                    class="main-play"
+                    id="mainPlay"
+                    onclick="toggleAudio()">
+                    ▶
+                </button>
+
+                <button onclick="skipForward()">
+                    ↷
+                </button>
+
+            </div>
+
+            <div class="progress-area">
+
+                <span id="currentTime">
+                    0:00
+                </span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    value="0"
+                    min="0"
+                    max="100"
+                >
+
+                <span id="duration">
+                    0:00
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="player-options">
+
+            <button onclick="changeSpeed()">
+                <span id="speedText">1x</span>
+            </button>
+
+            <button onclick="toggleMute()">
+                🔊
+            </button>
+
+            <button onclick="closePlayer()">
+                ×
+            </button>
+
+        </div>
+
+        <audio id="audioElement"></audio>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <span class="logo-icon">◉</span>
+                    <span>Echo<span class="logo-highlight">Pod</span></span>
+                </div>
+
+                <p>
+                    Stories, ideas and conversations
+                    worth listening to.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">𝕏</a>
+                    <a href="#">◎</a>
+                    <a href="#">in</a>
+                    <a href="#">▶</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#discover">Discover</a>
+                <a href="#categories">Categories</a>
+                <a href="#episodes">Episodes</a>
+                <a href="#hosts">Creators</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#home">About EchoPod</a>
+                <a href="#subscribe">Careers</a>
+                <a href="#subscribe">Advertise</a>
+                <a href="#subscribe">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Listen</h4>
+
+                <a href="#episodes">Popular Shows</a>
+                <a href="#library">My Library</a>
+                <a href="#episodes">New Releases</a>
+                <a href="#categories">Topics</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 EchoPod. All rights reserved.
+            </span>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        onclick="window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

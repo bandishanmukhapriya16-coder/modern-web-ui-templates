@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Polopan is a smart wardrobe platform that helps you organize clothes, discover outfits and build better everyday looks."
+    >
+
+    <title>Polopan | Smart Wardrobe</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+
+            <span class="logo-mark">P</span>
+
+            <span>POLoPAN</span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#wardrobe">Wardrobe</a>
+
+            <a href="#outfits">Outfits</a>
+
+            <a href="#discover">Discover</a>
+
+            <a href="#insights">Insights</a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <!-- Combined dark mode toggle -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                type="button"
+            >
+
+                <span id="themeIcon">☾</span>
+
+            </button>
+
+
+            <a href="#wardrobe" class="nav-library">
+
+                My Wardrobe
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main id="home">
+
+
+<section class="hero">
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+
+                SMART WARDROBE · PERSONAL STYLE
+
+            </span>
+
+
+            <h1>
+
+                Your wardrobe,
+
+                <span>made smarter.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Organize what you own, discover new combinations,
+                and build outfits that actually fit your everyday life.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#wardrobe" class="primary-button">
+
+                    Explore My Wardrobe
+
+                </a>
+
+
+                <a href="#outfits" class="secondary-button">
+
+                    Create an Outfit
+
+                </a>
+
+            </div>
+
+
+            <!-- HERO STATS -->
+
+            <div class="hero-stats">
+
+                <div>
+
+                    <strong>48</strong>
+
+                    <span>Items tracked</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>24</strong>
+
+                    <span>Outfits created</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>86%</strong>
+
+                    <span>Style match</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-visual">
+
+
+            <div class="hero-image-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern clothing collection"
+                >
+
+            </div>
+
+
+            <!-- WEATHER CARD -->
+
+            <div class="floating-card weather-card">
+
+                <span class="floating-icon">☀</span>
+
+                <div>
+
+                    <strong>24°C today</strong>
+
+                    <small>Perfect for light layers</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMART PICK CARD -->
+
+            <div class="floating-card smart-card">
+
+                <span class="smart-dot"></span>
+
+                <div>
+
+                    <strong>Smart pick</strong>
+
+                    <small>3 outfits match your style</small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     QUICK STATS
+========================================================= -->
+
+<section class="stats-section">
+
+    <div class="container stats-grid">
+
+
+        <div class="stat-item">
+
+            <span class="stat-icon">◈</span>
+
+            <div>
+
+                <strong>48</strong>
+
+                <span>Wardrobe pieces</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-item">
+
+            <span class="stat-icon">✦</span>
+
+            <div>
+
+                <strong>24</strong>
+
+                <span>Saved outfits</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-item">
+
+            <span class="stat-icon">↗</span>
+
+            <div>
+
+                <strong>86%</strong>
+
+                <span>Style compatibility</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-item">
+
+            <span class="stat-icon">◎</span>
+
+            <div>
+
+                <strong>12</strong>
+
+                <span>New combinations</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WARDROBE
+========================================================= -->
+
+<section class="section" id="wardrobe">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="eyebrow">
+
+                    YOUR COLLECTION
+
+                </span>
+
+                <h2>
+
+                    Everything you own,
+
+                    <span>in one place.</span>
+
+                </h2>
+
+            </div>
+
+
+            <button
+                class="primary-button small-button"
+                onclick="openAddItem()"
+                type="button"
+            >
+
+                + Add Item
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="filter-bar">
+
+            <button
+                class="filter-button active"
+                data-filter="all"
+            >
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="tops"
+            >
+
+                Tops
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="bottoms"
+            >
+
+                Bottoms
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="shoes"
+            >
+
+                Shoes
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="accessories"
+            >
+
+                Accessories
+
+            </button>
+
+        </div>
+
+
+
+        <!-- WARDROBE GRID -->
+
+        <div class="wardrobe-grid">
+
+
+            <!-- ITEM 1 -->
+
+            <article
+                class="clothing-card"
+                data-category="tops"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=700&q=85"
+                        alt="White shirt"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add white shirt to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Classic White Shirt</h3>
+
+                        <p>Tops · Cotton</p>
+
+                    </div>
+
+
+                    <span class="item-color white"></span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ITEM 2 -->
+
+            <article
+                class="clothing-card"
+                data-category="bottoms"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85"
+                        alt="Blue denim jeans"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add jeans to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Classic Blue Denim</h3>
+
+                        <p>Bottoms · Denim</p>
+
+                    </div>
+
+
+                    <span class="item-color blue"></span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ITEM 3 -->
+
+            <article
+                class="clothing-card"
+                data-category="tops"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                        alt="Black casual t-shirt"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add black t-shirt to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Essential Black Tee</h3>
+
+                        <p>Tops · Everyday</p>
+
+                    </div>
+
+
+                    <span class="item-color black"></span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ITEM 4 -->
+
+            <article
+                class="clothing-card"
+                data-category="shoes"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+                        alt="Red and white sneakers"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add sneakers to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Everyday Sneakers</h3>
+
+                        <p>Shoes · Casual</p>
+
+                    </div>
+
+
+                    <span class="item-color red"></span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ITEM 5 -->
+
+            <article
+                class="clothing-card"
+                data-category="accessories"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=85"
+                        alt="Classic wrist watch"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add watch to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Minimal Watch</h3>
+
+                        <p>Accessories · Classic</p>
+
+                    </div>
+
+
+                    <span class="item-color gold"></span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ITEM 6 -->
+
+            <article
+                class="clothing-card"
+                data-category="accessories"
+            >
+
+                <div class="clothing-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
+                        alt="Fashion backpack"
+                    >
+
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                        type="button"
+                        aria-label="Add backpack to favorites"
+                    >
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="clothing-details">
+
+                    <div>
+
+                        <h3>Everyday Backpack</h3>
+
+                        <p>Accessories · Travel</p>
+
+                    </div>
+
+
+                    <span class="item-color brown"></span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SMART STYLING
+========================================================= -->
+
+<section class="section ai-section" id="outfits">
+
+    <div class="container ai-grid">
+
+
+        <!-- LEFT -->
+
+        <div class="ai-content">
+
+            <span class="eyebrow">
+
+                SMART STYLING
+
+            </span>
+
+
+            <h2>
+
+                Let your wardrobe
+
+                <span>do the thinking.</span>
+
+            </h2>
+
+
+            <p>
+
+                Polopan looks at your clothes, preferences,
+                weather and occasion to help you discover
+                combinations you may not have considered.
+
+            </p>
+
+
+            <div class="ai-features">
+
+
+                <div class="ai-feature">
+
+                    <span>✦</span>
+
+                    <div>
+
+                        <h3>Smart combinations</h3>
+
+                        <p>
+                            Discover pieces that work naturally together.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ai-feature">
+
+                    <span>☀</span>
+
+                    <div>
+
+                        <h3>Weather aware</h3>
+
+                        <p>
+                            Get suggestions based on today's conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ai-feature">
+
+                    <span>◎</span>
+
+                    <div>
+
+                        <h3>Personal style</h3>
+
+                        <p>
+                            Recommendations adapt to your preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="generateOutfit()"
+                type="button"
+            >
+
+                Generate My Outfit
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="outfit-result">
+
+
+            <div class="result-top">
+
+                <span class="result-badge">
+
+                    ✦ POLoPAN PICK
+
+                </span>
+
+
+                <span class="match-score">
+
+                    94% Match
+
+                </span>
+
+            </div>
+
+
+            <div class="result-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Stylish clothing collection"
+                >
+
+            </div>
+
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="eyebrow">
+
+                        TODAY'S LOOK
+
+                    </span>
+
+                    <h3>Effortless Weekend</h3>
+
+                </div>
+
+
+                <button
+                    class="save-outfit"
+                    onclick="saveOutfit()"
+                    type="button"
+                >
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <div class="outfit-items">
+
+                <span>White Shirt</span>
+
+                <span>Blue Denim</span>
+
+                <span>Everyday Sneakers</span>
+
+            </div>
+
+
+            <div class="result-footer">
+
+                <span>
+                    A relaxed combination for a comfortable day out.
+                </span>
+
+                <button
+                    onclick="showOutfitMessage()"
+                    type="button"
+                >
+
+                    View Outfit →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISCOVER
+========================================================= -->
+
+<section class="section" id="discover">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="eyebrow">
+
+                    STYLE DISCOVERY
+
+                </span>
+
+                <h2>
+
+                    Inspiration for
+
+                    <span>your next look.</span>
+
+                </h2>
+
+            </div>
+
+
+            <a href="#outfits" class="text-link">
+
+                Explore styles →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="discover-grid">
+
+
+            <!-- DISCOVER CARD 1 -->
+
+            <article class="discover-card">
+
+                <div class="discover-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+                        alt="Minimal fashion style"
+                    >
+
+                    <span>MINIMAL</span>
+
+                </div>
+
+
+                <div class="discover-content">
+
+                    <h3>Clean & Minimal</h3>
+
+                    <p>
+                        Neutral tones and timeless pieces
+                        for an effortless everyday style.
+                    </p>
+
+                    <a href="#outfits">
+                        Explore Look →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- DISCOVER CARD 2 -->
+
+            <article class="discover-card">
+
+                <div class="discover-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+                        alt="Modern casual fashion"
+                    >
+
+                    <span>CASUAL</span>
+
+                </div>
+
+
+                <div class="discover-content">
+
+                    <h3>Modern Casual</h3>
+
+                    <p>
+                        Comfortable staples styled with
+                        a contemporary everyday attitude.
+                    </p>
+
+                    <a href="#outfits">
+                        Explore Look →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- DISCOVER CARD 3 -->
+
+            <article class="discover-card">
+
+                <div class="discover-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
+                        alt="Elegant fashion outfit"
+                    >
+
+                    <span>ELEVATED</span>
+
+                </div>
+
+
+                <div class="discover-content">
+
+                    <h3>Elevated Everyday</h3>
+
+                    <p>
+                        Easy pieces combined with polished
+                        details for a more refined look.
+                    </p>
+
+                    <a href="#outfits">
+                        Explore Look →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section class="section how-section">
+
+    <div class="container">
+
+
+        <div class="center-heading">
+
+            <span class="eyebrow">
+
+                HOW IT WORKS
+
+            </span>
+
+
+            <h2>
+
+                A smarter way to
+
+                <span>get dressed.</span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="steps-grid">
+
+
+            <div class="step-card">
+
+                <span class="step-number">01</span>
+
+                <div class="step-icon">＋</div>
+
+                <h3>Add your wardrobe</h3>
+
+                <p>
+                    Add the clothes, shoes and accessories
+                    you already own.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <span class="step-number">02</span>
+
+                <div class="step-icon">✦</div>
+
+                <h3>Discover combinations</h3>
+
+                <p>
+                    Explore combinations based on your
+                    wardrobe and personal style.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <span class="step-number">03</span>
+
+                <div class="step-icon">✓</div>
+
+                <h3>Wear with confidence</h3>
+
+                <p>
+                    Save your favorite looks and make
+                    everyday dressing easier.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSIGHTS
+========================================================= -->
+
+<section class="section insights-section" id="insights">
+
+    <div class="container insights-grid">
+
+
+        <div>
+
+            <span class="eyebrow">
+
+                WARDROBE INSIGHTS
+
+            </span>
+
+
+            <h2>
+
+                Understand what
+
+                <span>you actually wear.</span>
+
+            </h2>
+
+
+            <p>
+
+                See which pieces are working hardest
+                in your wardrobe and where you can
+                discover new combinations.
+
+            </p>
+
+
+            <div class="insight-list">
+
+
+                <div>
+
+                    <strong>72%</strong>
+
+                    <span>
+                        of your wardrobe worn this month
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>18</strong>
+
+                    <span>
+                        outfits created this month
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>6</strong>
+
+                    <span>
+                        pieces need more styling
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="insight-chart">
+
+            <div class="chart-circle">
+
+                <div>
+
+                    <strong>72%</strong>
+
+                    <span>Worn</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-labels">
+
+                <span>
+
+                    <i class="dot worn"></i>
+
+                    Frequently worn
+
+                </span>
+
+
+                <span>
+
+                    <i class="dot occasional"></i>
+
+                    Occasionally worn
+
+                </span>
+
+
+                <span>
+
+                    <i class="dot unused"></i>
+
+                    Rarely worn
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <div>
+
+                <span class="eyebrow">
+
+                    YOUR STYLE, SIMPLIFIED
+
+                </span>
+
+
+                <h2>
+
+                    Make more outfits
+
+                    <span>from what you already own.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Build a wardrobe that works harder
+                    for you every day.
+
+                </p>
+
+            </div>
+
+
+            <a href="#wardrobe" class="primary-button">
+
+                Start Exploring
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+
+                <span class="logo-mark">P</span>
+
+                <span>POLoPAN</span>
+
+            </a>
+
+
+            <p>
+
+                A smarter digital wardrobe for
+                everyday style.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>Product</h4>
+
+            <a href="#wardrobe">Wardrobe</a>
+
+            <a href="#outfits">Outfits</a>
+
+            <a href="#discover">Discover</a>
+
+            <a href="#insights">Insights</a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <a href="#home">About</a>
+
+            <a href="#home">Careers</a>
+
+            <a href="#home">Contact</a>
+
+            <a href="#home">Privacy</a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>Follow</h4>
+
+            <a href="#home">Instagram</a>
+
+            <a href="#home">Pinterest</a>
+
+            <a href="#home">YouTube</a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Polopan. All rights reserved.
+
+        </p>
+
+
+        <span>
+
+            Designed for modern everyday wardrobes.
+
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     ADD ITEM MODAL
+========================================================= -->
+
+<div
+    class="modal"
+    id="addItemModal"
+>
+
+    <div class="modal-content">
+
+
+        <button
+            class="modal-close"
+            onclick="closeAddItem()"
+            type="button"
+            aria-label="Close modal"
+        >
+
+            ×
+
+        </button>
+
+
+        <span class="eyebrow">
+
+            NEW WARDROBE ITEM
+
+        </span>
+
+
+        <h2>Add something new.</h2>
+
+
+        <p>
+
+            Add a piece to your digital wardrobe.
+
+        </p>
+
+
+        <form id="addItemForm">
+
+
+            <label for="itemName">
+
+                Item name
+
+            </label>
+
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Example: Beige Overshirt"
+                required
+            >
+
+
+            <label for="itemCategory">
+
+                Category
+
+            </label>
+
+
+            <select id="itemCategory" required>
+
+                <option value="tops">Tops</option>
+
+                <option value="bottoms">Bottoms</option>
+
+                <option value="shoes">Shoes</option>
+
+                <option value="accessories">
+                    Accessories
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+
+                Add to Wardrobe
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div class="toast" id="toast">
+
+    <strong id="toastTitle">
+
+        Success
+
+    </strong>
+
+
+    <span id="toastMessage">
+
+        Action completed.
+
+    </span>
+
+</div>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    type="button"
+    aria-label="Back to top"
+>
+
+    ↑
+
+</button>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
