@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EXO-SCAN | Alien Detector</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-symbol">✦</span>
+                <span>EXO<span class="accent">-SCAN</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Mission</a>
+                <a href="#scanner">Scanner</a>
+                <a href="#signals">Signals</a>
+                <a href="#targets">Targets</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeToggle"
+                    aria-label="Toggle theme">
+                    ☀
+                </button>
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open menu">
+                    ☰
+                </button>
+
+                <button
+                    class="launch-btn"
+                    onclick="startScan()">
+                    Start Scan
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    DEEP SPACE MONITORING ACTIVE
+                </div>
+
+                <h1>
+                    Search beyond<br>
+                    <span>what we know.</span>
+                </h1>
+
+                <p>
+                    Explore distant worlds, analyze atmospheric signatures,
+                    and monitor unusual signals in the search for life beyond Earth.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        onclick="scrollToSection('scanner')">
+                        Launch Scanner →
+                    </button>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="scrollToSection('targets')">
+                        Explore Targets
+                    </button>
+
+                </div>
+
+                <div class="hero-data">
+
+                    <div>
+                        <strong>4,892</strong>
+                        <span>Targets monitored</span>
+                    </div>
+
+                    <div>
+                        <strong>218</strong>
+                        <span>Signal candidates</span>
+                    </div>
+
+                    <div>
+                        <strong>99.8%</strong>
+                        <span>System uptime</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REAL SPACE IMAGE -->
+
+            <div class="hero-image">
+
+                <img
+                    src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2023/09/STScI-01H9R8AEK6Y7QR03MGN9V9P6ZJ.jpg?crop=faces%2Cfocalpoint&fit=clip&h=2160&w=3840"
+                    alt="NASA illustration of exoplanet K2-18 b">
+
+                <div class="image-overlay"></div>
+
+                <div class="image-label">
+                    <span>OBSERVATION 01</span>
+                    <strong>K2-18 b</strong>
+                    <small>120 light-years away</small>
+                </div>
+
+                <div class="scan-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SCANNER ================= -->
+
+        <section class="section scanner-section" id="scanner">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        SIGNAL ANALYSIS
+                    </span>
+
+                    <h2>
+                        Deep-space scanner
+                    </h2>
+                </div>
+
+                <div class="scanner-status">
+                    <span></span>
+                    SYSTEM ONLINE
+                </div>
+
+            </div>
+
+
+            <div class="scanner-grid">
+
+                <!-- Scanner -->
+
+                <div class="scanner-panel">
+
+                    <div class="scanner-top">
+
+                        <div>
+                            <span class="small-label">
+                                CURRENT TARGET
+                            </span>
+
+                            <h3 id="targetName">
+                                K2-18 b
+                            </h3>
+                        </div>
+
+                        <span class="target-code">
+                            EXO-1842
+                        </span>
+
+                    </div>
+
+
+                    <div class="radar">
+
+                        <div class="radar-ring ring-one"></div>
+                        <div class="radar-ring ring-two"></div>
+                        <div class="radar-ring ring-three"></div>
+
+                        <div class="radar-cross horizontal"></div>
+                        <div class="radar-cross vertical"></div>
+
+                        <div class="radar-sweep"></div>
+
+                        <span class="signal signal-one"></span>
+                        <span class="signal signal-two"></span>
+                        <span class="signal signal-three"></span>
+
+                        <div class="radar-center">
+                            <span>SCAN</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="scanner-controls">
+
+                        <button onclick="startScan()">
+                            Run Analysis
+                        </button>
+
+                        <button onclick="resetScanner()">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Readings -->
+
+                <div class="readings-panel">
+
+                    <span class="small-label">
+                        ATMOSPHERIC READINGS
+                    </span>
+
+                    <h3>Signal composition</h3>
+
+                    <div class="reading">
+
+                        <div class="reading-info">
+                            <span>Methane</span>
+                            <strong>82%</strong>
+                        </div>
+
+                        <div class="reading-bar">
+                            <div style="width:82%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reading">
+
+                        <div class="reading-info">
+                            <span>Carbon dioxide</span>
+                            <strong>67%</strong>
+                        </div>
+
+                        <div class="reading-bar">
+                            <div style="width:67%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reading">
+
+                        <div class="reading-info">
+                            <span>Water vapor</span>
+                            <strong>54%</strong>
+                        </div>
+
+                        <div class="reading-bar">
+                            <div style="width:54%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reading">
+
+                        <div class="reading-info">
+                            <span>Unknown signature</span>
+                            <strong>23%</strong>
+                        </div>
+
+                        <div class="reading-bar unknown">
+                            <div style="width:23%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analysis-note">
+
+                        <span class="note-icon">!</span>
+
+                        <p>
+                            Unusual atmospheric activity detected.
+                            Further observation recommended.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SIGNALS ================= -->
+
+        <section class="section signals-section" id="signals">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        DETECTION LOG
+                    </span>
+
+                    <h2>
+                        Recent signals
+                    </h2>
+                </div>
+
+                <button
+                    class="outline-btn"
+                    onclick="showToast('Signal database refreshed')">
+                    Refresh ↻
+                </button>
+
+            </div>
+
+
+            <div class="signal-table">
+
+                <div class="table-head">
+                    <span>OBJECT</span>
+                    <span>TYPE</span>
+                    <span>STRENGTH</span>
+                    <span>STATUS</span>
+                </div>
+
+
+                <div class="signal-row">
+
+                    <div class="object-info">
+                        <span class="planet-icon">◉</span>
+
+                        <div>
+                            <strong>K2-18 b</strong>
+                            <small>Leo constellation</small>
+                        </div>
+                    </div>
+
+                    <span>Atmospheric</span>
+
+                    <div class="strength">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span class="status possible">
+                        Possible
+                    </span>
+
+                </div>
+
+
+                <div class="signal-row">
+
+                    <div class="object-info">
+                        <span class="planet-icon">◉</span>
+
+                        <div>
+                            <strong>TRAPPIST-1e</strong>
+                            <small>Aquarius constellation</small>
+                        </div>
+                    </div>
+
+                    <span>Thermal</span>
+
+                    <div class="strength">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="empty"></span>
+                    </div>
+
+                    <span class="status monitoring">
+                        Monitoring
+                    </span>
+
+                </div>
+
+
+                <div class="signal-row">
+
+                    <div class="object-info">
+                        <span class="planet-icon">◉</span>
+
+                        <div>
+                            <strong>VHS 1256 b</strong>
+                            <small>Corvus constellation</small>
+                        </div>
+                    </div>
+
+                    <span>Spectral</span>
+
+                    <div class="strength">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="empty"></span>
+                        <span class="empty"></span>
+                    </div>
+
+                    <span class="status normal">
+                        Normal
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= IMAGE / SCIENCE ================= -->
+
+        <section class="section science-section">
+
+            <div class="science-image">
+
+                <img
+                    src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2023/09/STScI-01H9RF3TQE6XA9X01KXXJ351Z6.png?crop=faces%2Cfocalpoint&fit=clip&h=2160&w=3840"
+                    alt="NASA Webb exoplanet atmosphere composition">
+
+            </div>
+
+
+            <div class="science-content">
+
+                <span class="section-label">
+                    HOW WE SEARCH
+                </span>
+
+                <h2>
+                    Every signal tells a story.
+                </h2>
+
+                <p>
+                    Scientists can study distant planets by analyzing how
+                    their atmospheres interact with light. Different molecules
+                    leave distinctive signatures in observed spectra.
+                </p>
+
+                <div class="science-points">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Observe</strong>
+                        <p>
+                            Collect light and spectral information.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Analyze</strong>
+                        <p>
+                            Identify unusual chemical signatures.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Compare</strong>
+                        <p>
+                            Compare signals against scientific models.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TARGETS ================= -->
+
+        <section class="section targets-section" id="targets">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        TARGET LIBRARY
+                    </span>
+
+                    <h2>
+                        Worlds worth watching
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="target-grid">
+
+                <article class="target-card">
+
+                    <div class="target-image">
+
+                        <img
+                            src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2023/09/STScI-01H9R8AEK6Y7QR03MGN9V9P6ZJ.jpg?crop=faces%2Cfocalpoint&fit=clip&h=2160&w=3840"
+                            alt="K2-18 b">
+
+                        <span>01</span>
+
+                    </div>
+
+                    <div class="target-content">
+
+                        <span>EXOPLANET</span>
+
+                        <h3>K2-18 b</h3>
+
+                        <p>
+                            A distant world studied for its atmospheric composition.
+                        </p>
+
+                        <button onclick="selectTarget('K2-18 b')">
+                            Analyze →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="target-card">
+
+                    <div class="target-image">
+
+                        <img
+                            src="https://images.hindustantimes.com/tech/img/2023/03/28/1600x900/James_webb_telescope_wikimedia_commons_1674753375194_1679978422178_1679978422178.jpg"
+                            alt="James Webb Space Telescope">
+
+                        <span>02</span>
+
+                    </div>
+
+                    <div class="target-content">
+
+                        <span>OBSERVATORY</span>
+
+                        <h3>JWST Watch</h3>
+
+                        <p>
+                            Track observations and discoveries from deep-space missions.
+                        </p>
+
+                        <button onclick="selectTarget('JWST Watch')">
+                            Analyze →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="target-card">
+
+                    <div class="target-image">
+
+                        <img
+                            src="https://science.nasa.gov/wp-content/uploads/2023/09/exoplanet-k2-18-b-illustration.jpg"
+                            alt="Exoplanet illustration"
+                            onerror="this.style.display='none'">
+
+                        <div class="fallback-space">
+                            ✦
+                        </div>
+
+                        <span>03</span>
+
+                    </div>
+
+                    <div class="target-content">
+
+                        <span>DEEP SPACE</span>
+
+                        <h3>Unknown Sector</h3>
+
+                        <p>
+                            A simulated search region for unexplained signals.
+                        </p>
+
+                        <button onclick="selectTarget('Unknown Sector')">
+                            Analyze →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta">
+
+            <div>
+
+                <span class="section-label">
+                    THE SEARCH CONTINUES
+                </span>
+
+                <h2>
+                    The universe is<br>
+                    still full of questions.
+                </h2>
+
+                <p>
+                    Explore signals, compare worlds,
+                    and keep looking beyond the horizon.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    onclick="startScan()">
+                    Begin New Scan →
+                </button>
+
+            </div>
+
+            <div class="cta-orbit">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="planet">
+                    ◉
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-symbol">✦</span>
+                    <span>EXO<span class="accent">-SCAN</span></span>
+                </a>
+
+                <p>
+                    A conceptual interface for exploring
+                    signals and worlds beyond Earth.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Mission</a>
+                <a href="#scanner">Scanner</a>
+                <a href="#signals">Signals</a>
+                <a href="#targets">Targets</a>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 EXO-SCAN</span>
+                <span>Front-end research interface</span>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Toast -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

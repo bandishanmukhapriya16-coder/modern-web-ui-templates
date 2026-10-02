@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DermaCare | Skin Wellness</title>
+
+    <meta
+        name="description"
+        content="DermaCare is a modern skin wellness dashboard for building simple and consistent skincare routines."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>DermaCare</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#concerns">Skin Concerns</a>
+                <a href="#routine">Routine</a>
+                <a href="#tips">Tips</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button
+                    class="icon-button"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode"
+                    title="Toggle theme"
+                >
+                    ☾
+                </button>
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="dashboard">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        PERSONAL SKIN WELLNESS
+                    </div>
+
+                    <h1>
+                        Understand your skin.
+                        <span>Care for it better.</span>
+                    </h1>
+
+                    <p>
+                        A simple wellness dashboard to understand your
+                        everyday skin habits, track your routine and
+                        build healthier skincare consistency.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#routine" class="primary-button">
+                            Start My Routine →
+                        </a>
+
+                        <a href="#concerns" class="secondary-button">
+                            Explore Skin Concerns
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span>✓</span>
+                        Wellness-focused guidance, not medical diagnosis.
+                    </div>
+
+                </div>
+
+
+                <!-- REAL IMAGE -->
+
+                <div class="hero-visual">
+
+                    <div class="image-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=85"
+                            alt="Skin care products"
+                        >
+
+                        <div class="image-overlay">
+
+                            <div>
+                                <span class="small-label">
+                                    TODAY'S SKIN
+                                </span>
+
+                                <strong>
+                                    Looking balanced
+                                </strong>
+                            </div>
+
+                            <div class="score">
+                                86
+                                <small>/100</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card hydration-card">
+
+                        <span class="floating-icon">💧</span>
+
+                        <div>
+                            <small>Hydration</small>
+                            <strong>Good</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card sun-card">
+
+                        <span class="floating-icon">☀️</span>
+
+                        <div>
+                            <small>Sun Protection</small>
+                            <strong>Remember SPF</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK STATS ================= -->
+
+        <section class="stats-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+                    <span class="section-tag">YOUR OVERVIEW</span>
+                    <h2>Today's skin check</h2>
+                    <p>
+                        Small daily habits can make your skincare routine
+                        more consistent.
+                    </p>
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon blue">💧</span>
+                            <span class="stat-status good">Good</span>
+                        </div>
+
+                        <h3>Hydration</h3>
+
+                        <div class="progress">
+                            <span style="width: 82%;"></span>
+                        </div>
+
+                        <p>82% wellness level</p>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon yellow">☀️</span>
+                            <span class="stat-status attention">Check</span>
+                        </div>
+
+                        <h3>Sun Protection</h3>
+
+                        <div class="progress">
+                            <span style="width: 65%;"></span>
+                        </div>
+
+                        <p>Apply SPF before going outside</p>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon purple">🌙</span>
+                            <span class="stat-status good">Good</span>
+                        </div>
+
+                        <h3>Night Routine</h3>
+
+                        <div class="progress">
+                            <span style="width: 90%;"></span>
+                        </div>
+
+                        <p>Excellent consistency</p>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <span class="stat-icon green">💚</span>
+                            <span class="stat-status good">Stable</span>
+                        </div>
+
+                        <h3>Overall Wellness</h3>
+
+                        <div class="progress">
+                            <span style="width: 86%;"></span>
+                        </div>
+
+                        <p>Keep your routine consistent</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKIN CONCERNS ================= -->
+
+        <section class="concerns-section" id="concerns">
+
+            <div class="section-container">
+
+                <div class="section-heading split-heading">
+
+                    <div>
+                        <span class="section-tag">UNDERSTAND YOUR SKIN</span>
+
+                        <h2>
+                            Common skin concerns
+                        </h2>
+                    </div>
+
+                    <p>
+                        Learn about everyday skin concerns and simple
+                        wellness habits that can support your routine.
+                    </p>
+
+                </div>
+
+
+                <div class="concerns-grid">
+
+                    <article class="concern-card">
+
+                        <div class="concern-number">01</div>
+
+                        <div class="concern-icon">💧</div>
+
+                        <h3>Dryness</h3>
+
+                        <p>
+                            Skin may feel tight, rough or uncomfortable
+                            when it needs more moisture.
+                        </p>
+
+                        <button
+                            class="learn-button"
+                            data-topic="dryness"
+                        >
+                            Learn more →
+                        </button>
+
+                    </article>
+
+
+                    <article class="concern-card featured">
+
+                        <div class="concern-number">02</div>
+
+                        <div class="concern-icon">✨</div>
+
+                        <h3>Acne & Blemishes</h3>
+
+                        <p>
+                            Consistent cleansing and avoiding unnecessary
+                            touching can support clearer-looking skin.
+                        </p>
+
+                        <button
+                            class="learn-button"
+                            data-topic="acne"
+                        >
+                            Learn more →
+                        </button>
+
+                    </article>
+
+
+                    <article class="concern-card">
+
+                        <div class="concern-number">03</div>
+
+                        <div class="concern-icon">☀️</div>
+
+                        <h3>Sun Exposure</h3>
+
+                        <p>
+                            Daily sun protection is an important part of
+                            a long-term skincare routine.
+                        </p>
+
+                        <button
+                            class="learn-button"
+                            data-topic="sun"
+                        >
+                            Learn more →
+                        </button>
+
+                    </article>
+
+
+                    <article class="concern-card">
+
+                        <div class="concern-number">04</div>
+
+                        <div class="concern-icon">🌿</div>
+
+                        <h3>Sensitivity</h3>
+
+                        <p>
+                            Gentle products and a simple routine can help
+                            avoid unnecessary irritation.
+                        </p>
+
+                        <button
+                            class="learn-button"
+                            data-topic="sensitivity"
+                        >
+                            Learn more →
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKINCARE IMAGE SECTION ================= -->
+
+        <section class="wellness-section">
+
+            <div class="section-container">
+
+                <div class="wellness-grid">
+
+                    <div class="wellness-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85"
+                            alt="Skin care routine"
+                        >
+
+                    </div>
+
+
+                    <div class="wellness-content">
+
+                        <span class="section-tag">
+                            SIMPLE IS BETTER
+                        </span>
+
+                        <h2>
+                            Build a routine you can actually follow.
+                        </h2>
+
+                        <p>
+                            Skincare does not have to be complicated.
+                            Focus on consistency, gentle care, hydration
+                            and sun protection.
+                        </p>
+
+
+                        <div class="benefit-list">
+
+                            <div class="benefit-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Cleanse gently</strong>
+                                    <p>
+                                        Keep cleansing simple and consistent.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="benefit-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Keep skin hydrated</strong>
+                                    <p>
+                                        Support your skin with regular moisture.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="benefit-item">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Protect from sunlight</strong>
+                                    <p>
+                                        Make sun protection part of your morning.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DAILY ROUTINE ================= -->
+
+        <section class="routine-section" id="routine">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+                    <span class="section-tag">DAILY ROUTINE</span>
+                    <h2>Keep your routine on track</h2>
+                    <p>
+                        Complete today's simple skincare habits.
+                    </p>
+                </div>
+
+
+                <div class="routine-layout">
+
+                    <div class="routine-card">
+
+                        <div class="routine-header">
+
+                            <div>
+                                <span class="routine-day">
+                                    TODAY
+                                </span>
+
+                                <h3>Morning routine</h3>
+                            </div>
+
+                            <div class="routine-progress">
+                                <strong id="routineCount">0/4</strong>
+                                <span>completed</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="routine-items">
+
+                            <button
+                                class="routine-item"
+                                data-routine
+                            >
+                                <span class="check-circle">✓</span>
+
+                                <div>
+                                    <strong>Gentle cleanse</strong>
+                                    <small>Start with a clean base</small>
+                                </div>
+
+                                <span class="routine-time">
+                                    2 min
+                                </span>
+                            </button>
+
+
+                            <button
+                                class="routine-item"
+                                data-routine
+                            >
+                                <span class="check-circle">✓</span>
+
+                                <div>
+                                    <strong>Moisturize</strong>
+                                    <small>Keep skin comfortable</small>
+                                </div>
+
+                                <span class="routine-time">
+                                    1 min
+                                </span>
+                            </button>
+
+
+                            <button
+                                class="routine-item"
+                                data-routine
+                            >
+                                <span class="check-circle">✓</span>
+
+                                <div>
+                                    <strong>Apply SPF</strong>
+                                    <small>Protect against UV exposure</small>
+                                </div>
+
+                                <span class="routine-time">
+                                    1 min
+                                </span>
+                            </button>
+
+
+                            <button
+                                class="routine-item"
+                                data-routine
+                            >
+                                <span class="check-circle">✓</span>
+
+                                <div>
+                                    <strong>Drink water</strong>
+                                    <small>Support daily hydration</small>
+                                </div>
+
+                                <span class="routine-time">
+                                    1 min
+                                </span>
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            class="complete-button"
+                            id="completeRoutine"
+                        >
+                            Complete routine
+                        </button>
+
+                    </div>
+
+
+                    <div class="routine-side">
+
+                        <div class="routine-tip">
+
+                            <div class="tip-icon">💡</div>
+
+                            <span class="section-tag">
+                                TODAY'S TIP
+                            </span>
+
+                            <h3>
+                                Don't change everything at once.
+                            </h3>
+
+                            <p>
+                                A simple routine that you can follow
+                                consistently is often easier to maintain
+                                than a complicated routine.
+                            </p>
+
+                        </div>
+
+
+                        <div class="routine-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=85"
+                                alt="Skin wellness products"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TIPS ================= -->
+
+        <section class="tips-section" id="tips">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+                    <span class="section-tag">WELLNESS NOTES</span>
+                    <h2>Small habits, better consistency</h2>
+                </div>
+
+
+                <div class="tips-grid">
+
+                    <article class="tip-card">
+                        <span class="tip-number">01</span>
+                        <h3>Stay hydrated</h3>
+                        <p>
+                            Make drinking enough water part of your everyday
+                            wellness routine.
+                        </p>
+                    </article>
+
+
+                    <article class="tip-card">
+                        <span class="tip-number">02</span>
+                        <h3>Use sun protection</h3>
+                        <p>
+                            Remember daily SPF when you are exposed to sunlight.
+                        </p>
+                    </article>
+
+
+                    <article class="tip-card">
+                        <span class="tip-number">03</span>
+                        <h3>Keep it gentle</h3>
+                        <p>
+                            Avoid unnecessarily complicated routines and
+                            introduce products carefully.
+                        </p>
+                    </article>
+
+
+                    <article class="tip-card">
+                        <span class="tip-number">04</span>
+                        <h3>Be consistent</h3>
+                        <p>
+                            Give your routine time and focus on sustainable
+                            everyday habits.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="cta-container">
+
+                <div class="cta-content">
+
+                    <span class="section-tag">
+                        YOUR SKIN JOURNEY
+                    </span>
+
+                    <h2>
+                        Make skincare a habit,
+                        not a chore.
+                    </h2>
+
+                    <p>
+                        Start small, stay consistent and learn what works
+                        for your everyday wellness.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        id="ctaButton"
+                    >
+                        Start Today's Routine →
+                    </button>
+
+                </div>
+
+                <div class="cta-decoration">
+                    ✦
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span>DermaCare</span>
+                </a>
+
+                <p>
+                    A modern skin wellness experience designed to make
+                    everyday skincare simpler.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Explore</h4>
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#concerns">Skin Concerns</a>
+                    <a href="#routine">Routine</a>
+                </div>
+
+                <div>
+                    <h4>Wellness</h4>
+                    <a href="#tips">Tips</a>
+                    <a href="#routine">Daily Routine</a>
+                    <a href="#dashboard">Overview</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DermaCare. Built as a front-end wellness UI concept.
+            </p>
+
+            <p>
+                For educational purposes only.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    >
+        <span class="toast-icon">✓</span>
+        <span id="toastMessage">Done!</span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

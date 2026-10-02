@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield | Submarine Defense</title>
+
+    <meta
+        name="description"
+        content="DeepShield is a conceptual underwater monitoring and maritime awareness interface."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-mark">DS</span>
+
+                <span>
+                    DeepShield
+                    <small>UNDERWATER AWARENESS</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#overview">Overview</a>
+                <a href="#systems">Systems</a>
+                <a href="#monitoring">Monitoring</a>
+                <a href="#protocols">Protocols</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-button"
+                    id="themeToggle"
+                    title="Toggle theme"
+                >
+                    ☾
+                </button>
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="overview">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="status-label">
+                        <span class="live-dot"></span>
+                        SYSTEM STATUS: ONLINE
+                    </div>
+
+                    <h1>
+                        Defend
+                        <span>the deep.</span>
+                    </h1>
+
+                    <p>
+                        A conceptual underwater monitoring interface
+                        designed to visualize vessel awareness, ocean
+                        conditions and submarine readiness.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#monitoring"
+                            class="primary-button"
+                        >
+                            Open Command View →
+                        </a>
+
+                        <a
+                            href="#systems"
+                            class="secondary-button"
+                        >
+                            View Systems
+                        </a>
+
+                    </div>
+
+                    <div class="hero-disclaimer">
+                        Conceptual front-end visualization only.
+                        Not connected to real defense systems.
+                    </div>
+
+                </div>
+
+
+                <!-- REAL IMAGE -->
+
+                <div class="hero-visual">
+
+                    <div class="ocean-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=85"
+                            alt="Underwater ocean environment"
+                        >
+
+                        <div class="image-label">
+                            <span>UNDERWATER VIEW</span>
+                            <strong>SECTOR 07</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-readout depth-readout">
+
+                        <span>DEPTH</span>
+
+                        <strong>
+                            2,840
+                            <small>m</small>
+                        </strong>
+
+                    </div>
+
+
+                    <div class="floating-readout sonar-readout">
+
+                        <span>SONAR</span>
+
+                        <strong>
+                            ACTIVE
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMMAND BAR ================= -->
+
+        <section class="command-section">
+
+            <div class="section-container">
+
+                <div class="command-grid">
+
+                    <div class="command-card">
+
+                        <div class="command-top">
+                            <span>COMMAND CONSOLE</span>
+                            <span class="online">● ONLINE</span>
+                        </div>
+
+                        <div class="console-screen">
+
+                            <div class="console-line">
+                                <span>></span>
+                                Initializing monitoring system...
+                            </div>
+
+                            <div class="console-line success">
+                                <span>></span>
+                                Navigation link established
+                            </div>
+
+                            <div class="console-line">
+                                <span>></span>
+                                Scanning underwater sector...
+                            </div>
+
+                            <div class="console-line warning">
+                                <span>></span>
+                                Environmental signal detected
+                            </div>
+
+                            <div class="console-cursor">
+                                >
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coordinates-card">
+
+                        <span class="card-label">
+                            CURRENT SECTOR
+                        </span>
+
+                        <strong>
+                            18° 42' 31" N
+                        </strong>
+
+                        <strong>
+                            072° 51' 09" E
+                        </strong>
+
+                        <div class="coordinate-status">
+                            ● POSITION STABLE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RADAR ================= -->
+
+        <section class="radar-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-tag">
+                            UNDERWATER AWARENESS
+                        </span>
+
+                        <h2>
+                            Sector monitoring
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        A visual representation of underwater
+                        surroundings and conceptual contact awareness.
+                    </p>
+
+                </div>
+
+
+                <div class="radar-layout">
+
+                    <div class="radar-card">
+
+                        <div class="radar-header">
+
+                            <span>
+                                SECTOR 07
+                            </span>
+
+                            <span class="radar-live">
+                                ● LIVE SIMULATION
+                            </span>
+
+                        </div>
+
+
+                        <div class="radar">
+
+                            <div class="radar-ring ring-one"></div>
+                            <div class="radar-ring ring-two"></div>
+                            <div class="radar-ring ring-three"></div>
+
+                            <div class="radar-line"></div>
+
+                            <div class="submarine-dot main-contact">
+                                <span></span>
+                            </div>
+
+                            <div class="contact-dot contact-one">
+                                <span></span>
+                            </div>
+
+                            <div class="contact-dot contact-two">
+                                <span></span>
+                            </div>
+
+                            <div class="contact-dot contact-three">
+                                <span></span>
+                            </div>
+
+                            <div class="radar-center">
+                                DS-07
+                            </div>
+
+                        </div>
+
+
+                        <div class="radar-footer">
+
+                            <div>
+                                <span>CONTACTS</span>
+                                <strong>04</strong>
+                            </div>
+
+                            <div>
+                                <span>RANGE</span>
+                                <strong>12 NM</strong>
+                            </div>
+
+                            <div>
+                                <span>STATUS</span>
+                                <strong>STABLE</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="environment-card">
+
+                        <div class="environment-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1000&q=85"
+                                alt="Deep ocean environment"
+                            >
+
+                            <div class="environment-overlay">
+                                <span>OCEAN CONDITIONS</span>
+                                <strong>DEEP BLUE SECTOR</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="environment-data">
+
+                            <div>
+                                <span>Water Temp.</span>
+                                <strong>4.8°C</strong>
+                            </div>
+
+                            <div>
+                                <span>Visibility</span>
+                                <strong>LOW</strong>
+                            </div>
+
+                            <div>
+                                <span>Current</span>
+                                <strong>1.8 kn</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SYSTEMS ================= -->
+
+        <section class="systems-section" id="systems">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        DEFENSE AWARENESS
+                    </span>
+
+                    <h2>
+                        Core monitoring systems
+                    </h2>
+
+                    <p>
+                        Conceptual interface modules representing
+                        key underwater awareness areas.
+                    </p>
+
+                </div>
+
+
+                <div class="systems-grid">
+
+                    <article class="system-card">
+
+                        <div class="system-icon">
+                            ◉
+                        </div>
+
+                        <span class="system-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Sonar Awareness
+                        </h3>
+
+                        <p>
+                            Visualize underwater contacts and
+                            environmental signals in a simulated
+                            monitoring interface.
+                        </p>
+
+                        <div class="system-status">
+                            <span></span>
+                            OPERATIONAL
+                        </div>
+
+                    </article>
+
+
+                    <article class="system-card active">
+
+                        <div class="system-icon">
+                            ◈
+                        </div>
+
+                        <span class="system-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Hull Integrity
+                        </h3>
+
+                        <p>
+                            Track conceptual pressure and hull
+                            condition indicators through a clean
+                            monitoring dashboard.
+                        </p>
+
+                        <div class="system-status">
+                            <span></span>
+                            OPERATIONAL
+                        </div>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-icon">
+                            ◎
+                        </div>
+
+                        <span class="system-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Navigation
+                        </h3>
+
+                        <p>
+                            Present route awareness, coordinates
+                            and underwater environmental readings.
+                        </p>
+
+                        <div class="system-status">
+                            <span></span>
+                            OPERATIONAL
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MONITORING ================= -->
+
+        <section class="monitoring-section" id="monitoring">
+
+            <div class="section-container">
+
+                <div class="monitoring-layout">
+
+                    <div class="monitoring-content">
+
+                        <span class="section-tag">
+                            VESSEL MONITORING
+                        </span>
+
+                        <h2>
+                            DS-07
+                            <span>mission profile</span>
+                        </h2>
+
+                        <p>
+                            A conceptual readiness dashboard for
+                            visualizing vessel condition and
+                            environmental awareness.
+                        </p>
+
+
+                        <div class="monitoring-status">
+                            <span class="live-dot"></span>
+                            ALL PRIMARY SYSTEMS STABLE
+                        </div>
+
+                    </div>
+
+
+                    <div class="readiness-panel">
+
+                        <div class="panel-heading">
+
+                            <span>
+                                READINESS
+                            </span>
+
+                            <strong>
+                                94%
+                            </strong>
+
+                        </div>
+
+                        <div class="large-progress">
+                            <span style="width: 94%;"></span>
+                        </div>
+
+
+                        <div class="readiness-grid">
+
+                            <div>
+                                <span>Depth</span>
+                                <strong>2,840 m</strong>
+                            </div>
+
+                            <div>
+                                <span>Pressure</span>
+                                <strong>Stable</strong>
+                            </div>
+
+                            <div>
+                                <span>Temperature</span>
+                                <strong>4.8°C</strong>
+                            </div>
+
+                            <div>
+                                <span>Power</span>
+                                <strong>98%</strong>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="scan-button"
+                            id="scanButton"
+                        >
+                            Run System Check
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROTOCOLS ================= -->
+
+        <section class="protocol-section" id="protocols">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        AWARENESS PROTOCOL
+                    </span>
+
+                    <h2>
+                        Detect. Assess. Respond.
+                    </h2>
+
+                    <p>
+                        A simplified conceptual workflow for
+                        underwater situational awareness.
+                    </p>
+
+                </div>
+
+
+                <div class="protocol-grid">
+
+                    <article class="protocol-card">
+
+                        <span class="protocol-number">
+                            01
+                        </span>
+
+                        <div class="protocol-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Detect
+                        </h3>
+
+                        <p>
+                            Monitor environmental signals and
+                            identify changes within the simulated
+                            operating area.
+                        </p>
+
+                    </article>
+
+
+                    <article class="protocol-card">
+
+                        <span class="protocol-number">
+                            02
+                        </span>
+
+                        <div class="protocol-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            Assess
+                        </h3>
+
+                        <p>
+                            Review available readings and understand
+                            the surrounding environmental context.
+                        </p>
+
+                    </article>
+
+
+                    <article class="protocol-card">
+
+                        <span class="protocol-number">
+                            03
+                        </span>
+
+                        <div class="protocol-icon">
+                            →
+                        </div>
+
+                        <h3>
+                            Respond
+                        </h3>
+
+                        <p>
+                            Present the appropriate conceptual status
+                            response through the monitoring interface.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="cta-container">
+
+                <div>
+
+                    <span class="section-tag">
+                        DEEP INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Awareness starts
+                        below the surface.
+                    </h2>
+
+                    <p>
+                        Explore a modern conceptual interface for
+                        underwater monitoring and maritime awareness.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        id="exploreButton"
+                    >
+                        Explore Command View →
+                    </button>
+
+                </div>
+
+                <div class="cta-symbol">
+                    DS
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-mark">DS</span>
+
+                    <span>
+                        DeepShield
+                        <small>UNDERWATER AWARENESS</small>
+                    </span>
+                </a>
+
+                <p>
+                    A conceptual modern UI template for underwater
+                    monitoring and maritime awareness.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Explore</h4>
+                    <a href="#overview">Overview</a>
+                    <a href="#systems">Systems</a>
+                    <a href="#monitoring">Monitoring</a>
+                </div>
+
+                <div>
+                    <h4>Interface</h4>
+                    <a href="#protocols">Protocols</a>
+                    <a href="#overview">Command View</a>
+                    <a href="#systems">Readiness</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DeepShield. Concept UI for educational purposes.
+            </p>
+
+            <p>
+                No real defense systems connected.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        <span>✓</span>
+        <p id="toastMessage">System check complete.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
