@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Display Guard | Digital Safety</title>
+
+    <meta
+        name="description"
+        content="Privacy Display Guard - a modern digital privacy and screen protection interface."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="brand">
+                <span class="brand-icon">◈</span>
+
+                <span>
+                    Privacy<span class="brand-highlight">Guard</span>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#overview">Overview</a>
+                <a href="#protection">Protection</a>
+                <a href="#activity">Activity</a>
+                <a href="#tips">Tips</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-button"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode"
+                >
+                    ☾
+                </button>
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="overview">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        Privacy protection active
+                    </div>
+
+                    <h1>
+                        Keep your
+                        <span>screen private.</span>
+                    </h1>
+
+                    <p>
+                        Privacy Display Guard helps you monitor screen visibility,
+                        protect sensitive information and stay aware of your
+                        digital surroundings.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="primary-button"
+                            id="activateButton"
+                        >
+                            <span>◉</span>
+                            Activate Guard
+                        </button>
+
+                        <a
+                            href="#protection"
+                            class="secondary-button"
+                        >
+                            Explore protection
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+                            <strong id="privacyScore">94%</strong>
+                            <span>Privacy score</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <strong>24/7</strong>
+                            <span>Monitoring</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <strong id="alertsCount">3</strong>
+                            <span>Alerts today</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO IMAGE -->
+
+                <div class="hero-visual">
+
+                    <div class="image-glow"></div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85"
+                        alt="Modern smartphone displaying a dark screen"
+                    >
+
+                    <div class="privacy-overlay">
+
+                        <div class="overlay-header">
+                            <span>PRIVACY GUARD</span>
+
+                            <span class="live-indicator">
+                                <i></i>
+                                LIVE
+                            </span>
+                        </div>
+
+                        <div class="scan-area">
+
+                            <div class="scan-line"></div>
+
+                            <div class="lock-circle">
+                                <span>⌑</span>
+                            </div>
+
+                            <p>SCREEN PROTECTED</p>
+
+                        </div>
+
+                        <div class="overlay-footer">
+
+                            <span>Visibility</span>
+
+                            <strong>Private</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SECURITY DASHBOARD ================= -->
+
+        <section class="dashboard-section" id="protection">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">SECURITY CENTER</span>
+
+                        <h2>
+                            Your privacy,
+                            <span>at a glance.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Monitor important privacy signals and control
+                        your protection settings from one place.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <!-- PRIVACY SCORE -->
+
+                    <article class="security-card score-card">
+
+                        <div class="card-top">
+
+                            <div>
+                                <span class="card-label">
+                                    Privacy score
+                                </span>
+
+                                <h3 id="scoreNumber">94</h3>
+                            </div>
+
+                            <span class="card-icon green-icon">
+                                ✓
+                            </span>
+
+                        </div>
+
+                        <div class="score-ring">
+
+                            <div class="ring-inner">
+
+                                <strong>94</strong>
+
+                                <span>/100</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="score-message">
+                            Your screen currently has a strong
+                            privacy status.
+                        </div>
+
+                    </article>
+
+
+                    <!-- SCREEN VISIBILITY -->
+
+                    <article class="security-card">
+
+                        <div class="card-top">
+
+                            <div>
+                                <span class="card-label">
+                                    Screen visibility
+                                </span>
+
+                                <h3 id="visibilityStatus">
+                                    Private
+                                </h3>
+                            </div>
+
+                            <span class="card-icon blue-icon">
+                                ◉
+                            </span>
+
+                        </div>
+
+                        <div class="visibility-visual">
+
+                            <div class="person person-one"></div>
+                            <div class="person person-two"></div>
+
+                            <div class="screen-device">
+
+                                <div class="screen-lock">
+                                    🔒
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="small-button"
+                            id="privacyModeButton"
+                        >
+                            Toggle privacy mode
+                        </button>
+
+                    </article>
+
+
+                    <!-- THREAT MONITOR -->
+
+                    <article class="security-card threat-card">
+
+                        <div class="card-top">
+
+                            <div>
+                                <span class="card-label">
+                                    Threat monitor
+                                </span>
+
+                                <h3>Low risk</h3>
+                            </div>
+
+                            <span class="card-icon orange-icon">
+                                !
+                            </span>
+
+                        </div>
+
+                        <div class="threat-meter">
+
+                            <div class="meter-track">
+
+                                <div class="meter-progress"></div>
+
+                            </div>
+
+                            <div class="meter-labels">
+                                <span>Safe</span>
+                                <span>Medium</span>
+                                <span>High</span>
+                            </div>
+
+                        </div>
+
+                        <p class="card-description">
+                            No significant privacy exposure detected.
+                        </p>
+
+                    </article>
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <article
+                        class="security-card activity-card"
+                        id="activity"
+                    >
+
+                        <div class="card-top">
+
+                            <div>
+                                <span class="card-label">
+                                    Recent activity
+                                </span>
+
+                                <h3>Today</h3>
+                            </div>
+
+                            <span class="card-icon purple-icon">
+                                ◌
+                            </span>
+
+                        </div>
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+
+                                <span class="activity-dot safe"></span>
+
+                                <div>
+                                    <strong>Privacy mode enabled</strong>
+                                    <small>2 minutes ago</small>
+                                </div>
+
+                                <span class="activity-status">
+                                    Safe
+                                </span>
+
+                            </div>
+
+                            <div class="activity-item">
+
+                                <span class="activity-dot warning"></span>
+
+                                <div>
+                                    <strong>Public network detected</strong>
+                                    <small>38 minutes ago</small>
+                                </div>
+
+                                <span class="activity-status warning-text">
+                                    Review
+                                </span>
+
+                            </div>
+
+                            <div class="activity-item">
+
+                                <span class="activity-dot safe"></span>
+
+                                <div>
+                                    <strong>Screen protected</strong>
+                                    <small>1 hour ago</small>
+                                </div>
+
+                                <span class="activity-status">
+                                    Safe
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REAL WORLD PRIVACY ================= -->
+
+        <section class="environment-section">
+
+            <div class="section-container">
+
+                <div class="environment-grid">
+
+                    <div class="environment-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+                            alt="Modern workspace with computers"
+                        >
+
+                        <div class="image-label">
+                            <span class="pulse"></span>
+                            Public environment detected
+                        </div>
+
+                    </div>
+
+
+                    <div class="environment-content">
+
+                        <span class="eyebrow">
+                            SMART PROTECTION
+                        </span>
+
+                        <h2>
+                            Privacy should travel
+                            <span>with you.</span>
+                        </h2>
+
+                        <p>
+                            Whether you're working from a café, studying
+                            in a library or travelling through an airport,
+                            your screen can contain information that
+                            shouldn't be visible to strangers.
+                        </p>
+
+                        <div class="protection-list">
+
+                            <div class="protection-item">
+
+                                <span>01</span>
+
+                                <div>
+                                    <strong>
+                                        Shoulder-surfing awareness
+                                    </strong>
+
+                                    <p>
+                                        Stay aware of people around
+                                        your screen.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="protection-item">
+
+                                <span>02</span>
+
+                                <div>
+                                    <strong>
+                                        Sensitive information
+                                    </strong>
+
+                                    <p>
+                                        Reduce accidental exposure
+                                        of private content.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="protection-item">
+
+                                <span>03</span>
+
+                                <div>
+                                    <strong>
+                                        Privacy-first workflow
+                                    </strong>
+
+                                    <p>
+                                        Build better digital privacy habits.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRIVACY CONTROLS ================= -->
+
+        <section class="controls-section">
+
+            <div class="section-container">
+
+                <div class="section-heading centered">
+
+                    <span class="eyebrow">
+                        CONTROL CENTER
+                    </span>
+
+                    <h2>
+                        Configure your
+                        <span>privacy layer.</span>
+                    </h2>
+
+                    <p>
+                        Choose how Privacy Guard should protect your
+                        screen and notify you.
+                    </p>
+
+                </div>
+
+
+                <div class="controls-grid">
+
+                    <div class="control-card">
+
+                        <div class="control-icon">
+                            ◉
+                        </div>
+
+                        <div class="control-text">
+
+                            <h3>Privacy Mode</h3>
+
+                            <p>
+                                Reduce screen visibility in public places.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="privacySwitch"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="control-card">
+
+                        <div class="control-icon">
+                            ◇
+                        </div>
+
+                        <div class="control-text">
+
+                            <h3>Exposure Alerts</h3>
+
+                            <p>
+                                Receive alerts when privacy risks appear.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="alertSwitch"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="control-card">
+
+                        <div class="control-icon">
+                            ✦
+                        </div>
+
+                        <div class="control-text">
+
+                            <h3>Smart Monitoring</h3>
+
+                            <p>
+                                Continuously monitor your privacy status.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="monitorSwitch"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRIVACY TIPS ================= -->
+
+        <section class="tips-section" id="tips">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PRIVACY PLAYBOOK
+                        </span>
+
+                        <h2>
+                            Small habits,
+                            <span>stronger privacy.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tips-grid">
+
+                    <article class="tip-card">
+
+                        <span class="tip-number">01</span>
+
+                        <h3>
+                            Watch your surroundings
+                        </h3>
+
+                        <p>
+                            Before opening sensitive information,
+                            check who can see your display.
+                        </p>
+
+                        <span class="tip-arrow">↗</span>
+
+                    </article>
+
+
+                    <article class="tip-card featured-tip">
+
+                        <span class="tip-number">02</span>
+
+                        <h3>
+                            Use privacy filters
+                        </h3>
+
+                        <p>
+                            A physical privacy filter can narrow
+                            the viewing angle of your display.
+                        </p>
+
+                        <span class="tip-arrow">↗</span>
+
+                    </article>
+
+
+                    <article class="tip-card">
+
+                        <span class="tip-number">03</span>
+
+                        <h3>
+                            Lock when away
+                        </h3>
+
+                        <p>
+                            Always lock your device when leaving
+                            your workspace unattended.
+                        </p>
+
+                        <span class="tip-arrow">↗</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="cta-container">
+
+                <div>
+
+                    <span class="eyebrow">
+                        DIGITAL SAFETY
+                    </span>
+
+                    <h2>
+                        Make privacy
+                        <span>your default.</span>
+                    </h2>
+
+                    <p>
+                        Stay aware. Stay protected. Keep your
+                        information where it belongs.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-button cta-button"
+                    id="ctaButton"
+                >
+                    Activate Privacy Guard
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="brand">
+                    <span class="brand-icon">◈</span>
+
+                    <span>
+                        Privacy<span class="brand-highlight">
+                            Guard
+                        </span>
+                    </span>
+                </a>
+
+                <p>
+                    A modern privacy-awareness interface
+                    for safer digital experiences.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#overview">Overview</a>
+                <a href="#protection">Protection</a>
+                <a href="#activity">Activity</a>
+                <a href="#tips">Privacy Tips</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 Privacy Guard
+            </span>
+
+            <span>
+                Built for Digital Safety Hub
+            </span>
+        </div>
+
+    </footer>
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        <span class="toast-icon">✓</span>
+
+        <div>
+            <strong id="toastTitle">
+                Privacy Guard
+            </strong>
+
+            <p id="toastMessage">
+                Protection updated.
+            </p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
