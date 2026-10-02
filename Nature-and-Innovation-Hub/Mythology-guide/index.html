@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Mythos — Explore mythology, ancient stories, legendary figures, epics and cultural traditions from around the world.">
+
+    <title>Mythos | Stories That Shaped Civilizations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="navbar" id="navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-symbol">✦</span>
+            <span>MYTHOS</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#explore">Explore</a>
+            <a href="#stories">Stories</a>
+            <a href="#figures">Deities</a>
+            <a href="#epics">Epics</a>
+            <a href="#festivals">Traditions</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+                ◐
+            </button>
+
+            <button class="nav-login" id="loginBtn">
+                Sign In
+            </button>
+
+            <button class="primary-btn nav-explore" id="navExploreBtn">
+                Start Exploring
+            </button>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span>✦</span>
+                    MYTHOLOGY • HISTORY • CULTURE
+                </div>
+
+                <h1>
+                    Stories that
+                    <span>shaped civilizations.</span>
+                </h1>
+
+                <p>
+                    Discover ancient stories, legendary figures, epic journeys
+                    and cultural traditions from around the world.
+                </p>
+
+                <div class="hero-search">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input type="text" id="heroSearch" placeholder="Search stories, deities, epics..."
+                        autocomplete="off">
+
+                    <button id="heroSearchBtn">
+                        Explore
+                    </button>
+
+                </div>
+
+                <div class="popular-searches">
+                    <span>Popular:</span>
+                    <button class="search-tag">Mahabharata</button>
+                    <button class="search-tag">Greek Gods</button>
+                    <button class="search-tag">Norse Mythology</button>
+                    <button class="search-tag">Egyptian Gods</button>
+                </div>
+
+            </div>
+
+            <div class="hero-scroll">
+                <span>Scroll to discover</span>
+                <span class="scroll-line"></span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO / STATS
+        ========================== -->
+        <section class="intro-section" id="explore">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">THE WORLD OF MYTH</span>
+
+                <h2>
+                    One world.
+                    <em>Countless stories.</em>
+                </h2>
+
+                <p>
+                    Explore traditions that have been passed down through
+                    generations, shaping art, literature, festivals and culture.
+                </p>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <strong>12+</strong>
+                    <span>Mythology traditions</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>500+</strong>
+                    <span>Stories & legends</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>100+</strong>
+                    <span>Legendary figures</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>30+</strong>
+                    <span>Cultural traditions</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRADITIONS
+        ========================== -->
+        <section class="traditions-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">EXPLORE TRADITIONS</span>
+
+                    <h2>
+                        Worlds of
+                        <em>myth & legend.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Explore mythology through different civilizations and
+                    cultural traditions.
+                </p>
+
+            </div>
+
+
+            <div class="tradition-grid">
+
+                <article class="tradition-card indian-card">
+
+                    <div class="tradition-image"></div>
+
+                    <div class="tradition-content">
+
+                        <span class="tradition-number">01</span>
+
+                        <h3>Indian Mythology</h3>
+
+                        <p>
+                            Explore epics, legends, deities and stories found
+                            across diverse Indian traditions.
+                        </p>
+
+                        <button class="text-btn explore-tradition" data-tradition="Indian Mythology">
+                            Explore →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="tradition-card greek-card">
+
+                    <div class="tradition-image"></div>
+
+                    <div class="tradition-content">
+
+                        <span class="tradition-number">02</span>
+
+                        <h3>Greek Mythology</h3>
+
+                        <p>
+                            Meet Olympian gods, legendary heroes and stories
+                            from ancient Greece.
+                        </p>
+
+                        <button class="text-btn explore-tradition" data-tradition="Greek Mythology">
+                            Explore →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="tradition-card norse-card">
+
+                    <div class="tradition-image"></div>
+
+                    <div class="tradition-content">
+
+                        <span class="tradition-number">03</span>
+
+                        <h3>Norse Mythology</h3>
+
+                        <p>
+                            Enter the world of Odin, Thor, Loki and the
+                            legendary realms of Norse tradition.
+                        </p>
+
+                        <button class="text-btn explore-tradition" data-tradition="Norse Mythology">
+                            Explore →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="tradition-card egypt-card">
+
+                    <div class="tradition-image"></div>
+
+                    <div class="tradition-content">
+
+                        <span class="tradition-number">04</span>
+
+                        <h3>Egyptian Mythology</h3>
+
+                        <p>
+                            Discover ancient Egyptian gods, creation stories
+                            and beliefs surrounding the afterlife.
+                        </p>
+
+                        <button class="text-btn explore-tradition" data-tradition="Egyptian Mythology">
+                            Explore →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED STORIES
+        ========================== -->
+        <section class="stories-section" id="stories">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">FEATURED STORIES</span>
+
+                    <h2>
+                        Legends worth
+                        <em>remembering.</em>
+                    </h2>
+                </div>
+
+                <button class="outline-btn" id="viewStoriesBtn">
+                    View All Stories →
+                </button>
+
+            </div>
+
+
+            <div class="story-grid">
+
+                <article class="story-card">
+
+                    <div class="story-image story-ramayana">
+
+                        <span class="story-badge">
+                            Indian
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save story">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-category">EPIC</span>
+
+                        <h3>The Journey of Rama</h3>
+
+                        <p>
+                            A legendary journey exploring duty, courage,
+                            loyalty and the struggle between good and evil.
+                        </p>
+
+                        <button class="read-btn" data-story="The Journey of Rama">
+                            Read Story →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="story-card">
+
+                    <div class="story-image story-odyssey">
+
+                        <span class="story-badge">
+                            Greek
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save story">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-category">EPIC</span>
+
+                        <h3>The Odyssey</h3>
+
+                        <p>
+                            Follow Odysseus through a long and dangerous
+                            journey home after the Trojan War.
+                        </p>
+
+                        <button class="read-btn" data-story="The Odyssey">
+                            Read Story →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="story-card">
+
+                    <div class="story-image story-ragnarok">
+
+                        <span class="story-badge">
+                            Norse
+                        </span>
+
+                        <button class="favorite-btn" aria-label="Save story">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="story-content">
+
+                        <span class="story-category">LEGEND</span>
+
+                        <h3>Ragnarök</h3>
+
+                        <p>
+                            Explore the Norse tradition's story of a
+                            cataclysmic battle and transformation of the world.
+                        </p>
+
+                        <button class="read-btn" data-story="Ragnarök">
+                            Read Story →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DEITIES
+        ========================== -->
+        <section class="figures-section" id="figures">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">LEGENDARY FIGURES</span>
+
+                <h2>
+                    Meet the
+                    <em>mythic world.</em>
+                </h2>
+
+                <p>
+                    Gods, goddesses, heroes and legendary characters appear
+                    across many different cultural traditions.
+                </p>
+
+            </div>
+
+
+            <div class="figure-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="indian">
+                    Indian
+                </button>
+
+                <button class="filter-btn" data-filter="greek">
+                    Greek
+                </button>
+
+                <button class="filter-btn" data-filter="norse">
+                    Norse
+                </button>
+
+                <button class="filter-btn" data-filter="egyptian">
+                    Egyptian
+                </button>
+
+            </div>
+
+
+            <div class="figure-grid">
+
+                <article class="figure-card" data-category="indian">
+
+                    <div class="figure-avatar krishna">
+                        ॐ
+                    </div>
+
+                    <div>
+                        <span>INDIAN TRADITION</span>
+                        <h3>Krishna</h3>
+                        <p>
+                            A central figure in Hindu traditions and the
+                            Mahabharata.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Krishna">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="indian">
+
+                    <div class="figure-avatar rama">
+                        ◆
+                    </div>
+
+                    <div>
+                        <span>INDIAN TRADITION</span>
+                        <h3>Rama</h3>
+                        <p>
+                            The central figure of the Ramayana and a revered
+                            figure in Hindu traditions.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Rama">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="greek">
+
+                    <div class="figure-avatar zeus">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <span>GREEK TRADITION</span>
+                        <h3>Zeus</h3>
+                        <p>
+                            A major Olympian deity associated with the sky and
+                            thunder in Greek mythology.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Zeus">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="greek">
+
+                    <div class="figure-avatar athena">
+                        ♢
+                    </div>
+
+                    <div>
+                        <span>GREEK TRADITION</span>
+                        <h3>Athena</h3>
+                        <p>
+                            A Greek goddess associated with wisdom, strategy
+                            and crafts.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Athena">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="norse">
+
+                    <div class="figure-avatar thor">
+                        ⚒
+                    </div>
+
+                    <div>
+                        <span>NORSE TRADITION</span>
+                        <h3>Thor</h3>
+                        <p>
+                            A prominent Norse god associated with thunder and
+                            the protection of gods and humans.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Thor">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="norse">
+
+                    <div class="figure-avatar odin">
+                        ◉
+                    </div>
+
+                    <div>
+                        <span>NORSE TRADITION</span>
+                        <h3>Odin</h3>
+                        <p>
+                            A major Norse god associated with wisdom, knowledge
+                            and poetry.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Odin">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="egyptian">
+
+                    <div class="figure-avatar anubis">
+                        ◈
+                    </div>
+
+                    <div>
+                        <span>EGYPTIAN TRADITION</span>
+                        <h3>Anubis</h3>
+                        <p>
+                            An ancient Egyptian deity associated with funerary
+                            practices and the dead.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Anubis">
+                        +
+                    </button>
+
+                </article>
+
+
+                <article class="figure-card" data-category="egyptian">
+
+                    <div class="figure-avatar isis">
+                        ✦
+                    </div>
+
+                    <div>
+                        <span>EGYPTIAN TRADITION</span>
+                        <h3>Isis</h3>
+                        <p>
+                            An important Egyptian goddess associated with
+                            motherhood, magic and protection.
+                        </p>
+                    </div>
+
+                    <button class="figure-more" data-figure="Isis">
+                        +
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EPIC TIMELINE
+        ========================== -->
+        <section class="epics-section" id="epics">
+
+            <div class="epics-content">
+
+                <div class="section-heading">
+
+                    <span class="section-label">EPIC JOURNEYS</span>
+
+                    <h2>
+                        Stories that
+                        <em>travel through time.</em>
+                    </h2>
+
+                    <p>
+                        Epic traditions have preserved stories of heroes,
+                        conflicts, journeys and moral questions across
+                        generations.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item active">
+
+                        <span class="timeline-dot"></span>
+
+                        <div>
+                            <span>INDIAN TRADITION</span>
+                            <h3>Mahabharata</h3>
+                            <p>
+                                An expansive Sanskrit epic centered on the
+                                conflict between the Pandavas and Kauravas.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-dot"></span>
+
+                        <div>
+                            <span>GREEK TRADITION</span>
+                            <h3>Iliad</h3>
+                            <p>
+                                An ancient Greek epic poem associated with
+                                Homer and the Trojan War.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-dot"></span>
+
+                        <div>
+                            <span>INDIAN TRADITION</span>
+                            <h3>Ramayana</h3>
+                            <p>
+                                A major Sanskrit epic traditionally attributed
+                                to Valmiki.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-dot"></span>
+
+                        <div>
+                            <span>NORSE TRADITION</span>
+                            <h3>Poetic Edda</h3>
+                            <p>
+                                A collection of Old Norse poems preserving
+                                stories about gods and heroes.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="epic-art">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="epic-symbol">
+                    ✦
+                </div>
+
+                <div class="epic-quote">
+                    <span>“</span>
+                    Every generation
+                    finds its own meaning
+                    in an old story.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FESTIVALS / TRADITIONS
+        ========================== -->
+        <section class="festivals-section" id="festivals">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">CULTURE & TRADITION</span>
+
+                <h2>
+                    Mythology
+                    <em>in living culture.</em>
+                </h2>
+
+                <p>
+                    Myths and sacred traditions continue to influence festivals,
+                    art, rituals and community life.
+                </p>
+
+            </div>
+
+
+            <div class="festival-grid">
+
+                <article class="festival-card">
+
+                    <div class="festival-icon">🪔</div>
+
+                    <span>INDIA</span>
+
+                    <h3>Diwali</h3>
+
+                    <p>
+                        A major festival celebrated by millions, with diverse
+                        regional traditions and stories.
+                    </p>
+
+                    <button class="text-btn festival-btn" data-festival="Diwali">
+                        Discover →
+                    </button>
+
+                </article>
+
+
+                <article class="festival-card">
+
+                    <div class="festival-icon">🏛️</div>
+
+                    <span>GREECE</span>
+
+                    <h3>Panathenaia</h3>
+
+                    <p>
+                        An ancient Athenian festival associated with Athena
+                        and the city of Athens.
+                    </p>
+
+                    <button class="text-btn festival-btn" data-festival="Panathenaia">
+                        Discover →
+                    </button>
+
+                </article>
+
+
+                <article class="festival-card">
+
+                    <div class="festival-icon">🔥</div>
+
+                    <span>NORSE WORLD</span>
+
+                    <h3>Yule</h3>
+
+                    <p>
+                        A winter festival with traditions that have influenced
+                        later seasonal celebrations.
+                    </p>
+
+                    <button class="text-btn festival-btn" data-festival="Yule">
+                        Discover →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="about-section" id="about">
+
+            <div class="about-image">
+
+                <div class="about-symbol">
+                    ✦
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span class="section-label">ABOUT MYTHOS</span>
+
+                <h2>
+                    Understanding stories
+                    <em>across cultures.</em>
+                </h2>
+
+                <p>
+                    Mythos is a digital exploration of mythology and
+                    traditional storytelling. It brings together stories,
+                    legendary figures and cultural traditions in one accessible
+                    experience.
+                </p>
+
+                <p>
+                    Mythology is presented as part of the cultures and
+                    traditions in which these stories developed. Different
+                    communities may interpret the same stories in different
+                    ways.
+                </p>
+
+                <div class="about-points">
+
+                    <div>
+                        <span>01</span>
+                        <p>Explore diverse traditions</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <p>Discover legendary stories</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <p>Learn cultural context</p>
+                    </div>
+
+                </div>
+
+                <button class="primary-btn" id="aboutExploreBtn">
+                    Begin Your Journey →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+        <section class="newsletter-section">
+
+            <div class="newsletter-content">
+
+                <span class="section-label">
+                    THE MYTHOS LETTER
+                </span>
+
+                <h2>
+                    A story worth
+                    <em>discovering.</em>
+                </h2>
+
+                <p>
+                    Get occasional stories, cultural discoveries and
+                    mythology recommendations.
+                </p>
+
+                <form id="newsletterForm">
+
+                    <input type="email" id="emailInput" placeholder="Your email address" required>
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <small>
+                    No spam. Unsubscribe anytime.
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-symbol">✦</span>
+                    <span>MYTHOS</span>
+                </a>
+
+                <p>
+                    Stories, traditions and legendary worlds —
+                    explored with curiosity and respect.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#stories">Stories</a>
+                <a href="#figures">Deities</a>
+                <a href="#epics">Epics</a>
+                <a href="#festivals">Traditions</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Discover</h4>
+
+                <a href="#explore">Mythologies</a>
+                <a href="#stories">Featured Stories</a>
+                <a href="#figures">Legendary Figures</a>
+                <a href="#about">About Mythos</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <button class="footer-action" id="contactBtn">
+                    Contact Us
+                </button>
+
+                <button class="footer-action" id="feedbackBtn">
+                    Send Feedback
+                </button>
+
+                <button class="footer-action" id="privacyBtn">
+                    Privacy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Mythos. Educational concept project.
+            </span>
+
+            <span>
+                Made with curiosity ✦
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         STORY MODAL
+    ========================== -->
+    <div class="modal" id="storyModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-card">
+
+            <button class="modal-close" id="modalClose">
+                ×
+            </button>
+
+            <span class="section-label" id="modalCategory">
+                STORY
+            </span>
+
+            <h2 id="modalTitle">
+                Story Title
+            </h2>
+
+            <p id="modalText">
+                Story information will appear here.
+            </p>
+
+            <button class="primary-btn" id="modalAction">
+                Continue Exploring
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+    <div class="toast" id="toast">
+
+        <span class="toast-icon">✦</span>
+
+        <span id="toastMessage">
+            Welcome to Mythos
+        </span>
+
+    </div>
+
+
+    <!-- BACK TO TOP -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
