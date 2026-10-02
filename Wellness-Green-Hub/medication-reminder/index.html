@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medora | Medication Reminder</title>
+
+    <meta
+        name="description"
+        content="Medora is a modern medication reminder and daily medicine tracking interface."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-inner">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">✚</span>
+                <span>Med<span>ora</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Today</a>
+                <a href="#medications">Medications</a>
+                <a href="#history">History</a>
+                <a href="#insights">Insights</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode"
+                >
+                    ☾
+                </button>
+
+                <button class="profile-btn" id="profileBtn">
+                    <span class="profile-avatar">P</span>
+                    <span class="profile-name">Prathyusha</span>
+                </button>
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="live-dot"></span>
+                        DAILY MEDICATION ORGANIZER
+                    </div>
+
+                    <h1>
+                        Stay on track.
+                        <span>Feel in control.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Keep your daily medicines organized, track doses,
+                        monitor supplies and never lose sight of your routine.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button class="primary-btn" id="addMedicineHero">
+                            + Add medication
+                        </button>
+
+                        <a href="#medications" class="secondary-btn">
+                            View today's plan
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+                        <span>✓</span>
+                        Your medication routine is organized for today
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image-wrapper">
+
+                    <div class="hero-image-card">
+
+                        <img
+                            src="https://www.plus-doctor.com/assets/image/services/ai-medication-adherence-tracking-matters.webp"
+                            alt="Real medication reminder with smartphone and pill organizer"
+                        >
+
+                        <div class="hero-image-overlay">
+
+                            <div>
+                                <small>NEXT REMINDER</small>
+                                <strong>10:30 AM</strong>
+                            </div>
+
+                            <span class="reminder-pill">
+                                ● In 48 min
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-dose floating-dose-one">
+
+                        <span class="floating-icon">💊</span>
+
+                        <div>
+                            <strong>Morning Medicine</strong>
+                            <small>Taken ✓</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-dose floating-dose-two">
+
+                        <span class="floating-icon">⏰</span>
+
+                        <div>
+                            <strong>Next dose</strong>
+                            <small>10:30 AM</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-section">
+
+            <div class="container">
+
+                <div class="section-top">
+
+                    <div>
+                        <span class="section-kicker">TODAY</span>
+                        <h2>Your medication overview</h2>
+                    </div>
+
+                    <span class="date-label" id="currentDate">
+                        Today
+                    </span>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <article class="stat-card progress-stat">
+
+                        <div class="stat-card-top">
+                            <span class="stat-icon green">✓</span>
+                            <span class="status-label success">On track</span>
+                        </div>
+
+                        <p>Doses completed</p>
+
+                        <div class="big-number">
+                            <strong id="completedCount">2</strong>
+                            <span>/ 4</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <span id="dailyProgress" style="width: 50%;"></span>
+                        </div>
+
+                        <small>50% of today's plan</small>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <span class="stat-icon blue">⏰</span>
+                            <span class="status-label">Upcoming</span>
+                        </div>
+
+                        <p>Next reminder</p>
+
+                        <div class="big-number">
+                            <strong>10:30</strong>
+                            <span>AM</span>
+                        </div>
+
+                        <small>Daily Capsule</small>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <span class="stat-icon purple">▣</span>
+                            <span class="status-label">Inventory</span>
+                        </div>
+
+                        <p>Medicines active</p>
+
+                        <div class="big-number">
+                            <strong>4</strong>
+                        </div>
+
+                        <small>1 medicine needs refill soon</small>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+                            <span class="stat-icon orange">↗</span>
+                            <span class="status-label success">+4%</span>
+                        </div>
+
+                        <p>Weekly adherence</p>
+
+                        <div class="big-number">
+                            <strong>94</strong>
+                            <span>%</span>
+                        </div>
+
+                        <small>Compared with last week</small>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MEDICATIONS ================= -->
+
+        <section class="medications-section" id="medications">
+
+            <div class="container">
+
+                <div class="section-top">
+
+                    <div>
+                        <span class="section-kicker">TODAY'S SCHEDULE</span>
+                        <h2>Medication plan</h2>
+                    </div>
+
+                    <button class="outline-btn" id="addMedicineBtn">
+                        + Add medication
+                    </button>
+
+                </div>
+
+
+                <div class="medication-layout">
+
+                    <div class="medication-list">
+
+
+                        <!-- MEDICATION 1 -->
+
+                        <article class="medication-card completed">
+
+                            <div class="med-time">
+                                <strong>8:00</strong>
+                                <span>AM</span>
+                            </div>
+
+                            <div class="med-icon blue-med">
+                                💊
+                            </div>
+
+                            <div class="med-info">
+
+                                <div class="med-title-row">
+
+                                    <div>
+                                        <h3>Morning Medicine</h3>
+                                        <p>Tablet · Morning routine</p>
+                                    </div>
+
+                                    <span class="taken-badge">
+                                        ✓ Taken
+                                    </span>
+
+                                </div>
+
+                                <div class="med-meta">
+                                    <span>1 tablet</span>
+                                    <span>•</span>
+                                    <span>Completed at 8:02 AM</span>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="dose-action taken"
+                                disabled
+                            >
+                                ✓
+                            </button>
+
+                        </article>
+
+
+                        <!-- MEDICATION 2 -->
+
+                        <article class="medication-card">
+
+                            <div class="med-time">
+                                <strong>10:30</strong>
+                                <span>AM</span>
+                            </div>
+
+                            <div class="med-icon purple-med">
+                                ◉
+                            </div>
+
+                            <div class="med-info">
+
+                                <div class="med-title-row">
+
+                                    <div>
+                                        <h3>Daily Capsule</h3>
+                                        <p>Capsule · Daily reminder</p>
+                                    </div>
+
+                                    <span class="upcoming-badge">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+                                <div class="med-meta">
+                                    <span>1 capsule</span>
+                                    <span>•</span>
+                                    <span>In 48 minutes</span>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="dose-action mark-taken"
+                            >
+                                Mark taken
+                            </button>
+
+                        </article>
+
+
+                        <!-- MEDICATION 3 -->
+
+                        <article class="medication-card">
+
+                            <div class="med-time">
+                                <strong>2:00</strong>
+                                <span>PM</span>
+                            </div>
+
+                            <div class="med-icon orange-med">
+                                ◒
+                            </div>
+
+                            <div class="med-info">
+
+                                <div class="med-title-row">
+
+                                    <div>
+                                        <h3>Afternoon Medicine</h3>
+                                        <p>Tablet · Afternoon routine</p>
+                                    </div>
+
+                                    <span class="upcoming-badge">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+                                <div class="med-meta">
+                                    <span>1 tablet</span>
+                                    <span>•</span>
+                                    <span>Today at 2:00 PM</span>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="dose-action mark-taken"
+                            >
+                                Mark taken
+                            </button>
+
+                        </article>
+
+
+                        <!-- MEDICATION 4 -->
+
+                        <article class="medication-card">
+
+                            <div class="med-time">
+                                <strong>8:00</strong>
+                                <span>PM</span>
+                            </div>
+
+                            <div class="med-icon green-med">
+                                ✚
+                            </div>
+
+                            <div class="med-info">
+
+                                <div class="med-title-row">
+
+                                    <div>
+                                        <h3>Evening Medicine</h3>
+                                        <p>Tablet · Evening routine</p>
+                                    </div>
+
+                                    <span class="upcoming-badge">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+                                <div class="med-meta">
+                                    <span>1 tablet</span>
+                                    <span>•</span>
+                                    <span>Today at 8:00 PM</span>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="dose-action mark-taken"
+                            >
+                                Mark taken
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- DAILY PROGRESS -->
+
+                    <aside class="daily-progress-card">
+
+                        <span class="section-kicker">
+                            DAILY PROGRESS
+                        </span>
+
+                        <h3>Keep your routine moving.</h3>
+
+                        <div class="progress-ring">
+
+                            <svg viewBox="0 0 140 140">
+
+                                <circle
+                                    class="ring-bg"
+                                    cx="70"
+                                    cy="70"
+                                    r="58"
+                                ></circle>
+
+                                <circle
+                                    class="ring-progress"
+                                    id="progressRing"
+                                    cx="70"
+                                    cy="70"
+                                    r="58"
+                                ></circle>
+
+                            </svg>
+
+                            <div class="ring-text">
+                                <strong id="progressPercent">50%</strong>
+                                <span>complete</span>
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Two doses are completed. Keep your routine
+                            consistent throughout the day.
+                        </p>
+
+                        <button
+                            class="dark-action"
+                            id="viewScheduleBtn"
+                        >
+                            View full schedule →
+                        </button>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MEDICINE CABINET ================= -->
+
+        <section class="cabinet-section">
+
+            <div class="container">
+
+                <div class="section-top">
+
+                    <div>
+                        <span class="section-kicker">
+                            MEDICINE CABINET
+                        </span>
+
+                        <h2>Keep your supplies organized</h2>
+                    </div>
+
+                    <button
+                        class="text-btn"
+                        id="refillAllBtn"
+                    >
+                        Manage refills →
+                    </button>
+
+                </div>
+
+
+                <div class="cabinet-grid">
+
+                    <div class="cabinet-image">
+
+                        <img
+                            src="https://i5.walmartimages.com/seo/Zoksi-Bluetooth-Electronic-Pill-Dispenser-Alarm-Smart-Pill-Organizer-Reminder-Light-Pill-Timer-Tracker-Automatic-Medication-Dispenser-Weekly-7-Day-Pi_69d1d031-2c22-4653-b292-08ea36c1654f.dd216f04e6fc9ea7aa4df129ab627dd2.jpeg"
+                            alt="Real smart pill organizer with medication reminder"
+                        >
+
+                        <div class="cabinet-image-caption">
+                            <span>SMART ORGANIZATION</span>
+                            <strong>Everything in its place.</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="cabinet-items">
+
+                        <article class="supply-card">
+
+                            <div class="supply-icon">
+                                💊
+                            </div>
+
+                            <div>
+                                <h3>Morning Medicine</h3>
+                                <p>42 tablets remaining</p>
+
+                                <div class="supply-progress">
+                                    <span style="width: 72%;"></span>
+                                </div>
+                            </div>
+
+                            <strong class="stock-good">72%</strong>
+
+                        </article>
+
+
+                        <article class="supply-card warning-stock">
+
+                            <div class="supply-icon">
+                                ◉
+                            </div>
+
+                            <div>
+                                <h3>Daily Capsule</h3>
+                                <p>8 capsules remaining</p>
+
+                                <div class="supply-progress">
+                                    <span style="width: 22%;"></span>
+                                </div>
+                            </div>
+
+                            <strong class="stock-warning">22%</strong>
+
+                        </article>
+
+
+                        <article class="supply-card">
+
+                            <div class="supply-icon">
+                                ✚
+                            </div>
+
+                            <div>
+                                <h3>Evening Medicine</h3>
+                                <p>31 tablets remaining</p>
+
+                                <div class="supply-progress">
+                                    <span style="width: 58%;"></span>
+                                </div>
+                            </div>
+
+                            <strong class="stock-good">58%</strong>
+
+                        </article>
+
+
+                        <article class="supply-card">
+
+                            <div class="supply-icon">
+                                ◒
+                            </div>
+
+                            <div>
+                                <h3>Afternoon Medicine</h3>
+                                <p>26 tablets remaining</p>
+
+                                <div class="supply-progress">
+                                    <span style="width: 48%;"></span>
+                                </div>
+                            </div>
+
+                            <strong class="stock-good">48%</strong>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HISTORY ================= -->
+
+        <section class="history-section" id="history">
+
+            <div class="container">
+
+                <div class="section-top">
+
+                    <div>
+                        <span class="section-kicker">
+                            DOSE HISTORY
+                        </span>
+
+                        <h2>Recent activity</h2>
+                    </div>
+
+                    <button
+                        class="text-btn"
+                        id="exportBtn"
+                    >
+                        Export history →
+                    </button>
+
+                </div>
+
+
+                <div class="history-card">
+
+                    <div class="history-row history-header">
+                        <span>Date</span>
+                        <span>Medication</span>
+                        <span>Scheduled</span>
+                        <span>Status</span>
+                    </div>
+
+
+                    <div class="history-row">
+                        <span>Today</span>
+                        <strong>Morning Medicine</strong>
+                        <span>8:00 AM</span>
+                        <span class="history-status taken-status">
+                            ✓ Taken
+                        </span>
+                    </div>
+
+
+                    <div class="history-row">
+                        <span>Today</span>
+                        <strong>Daily Capsule</strong>
+                        <span>10:30 AM</span>
+                        <span class="history-status upcoming-status">
+                            Upcoming
+                        </span>
+                    </div>
+
+
+                    <div class="history-row">
+                        <span>Yesterday</span>
+                        <strong>Evening Medicine</strong>
+                        <span>8:00 PM</span>
+                        <span class="history-status taken-status">
+                            ✓ Taken
+                        </span>
+                    </div>
+
+
+                    <div class="history-row">
+                        <span>Yesterday</span>
+                        <strong>Afternoon Medicine</strong>
+                        <span>2:00 PM</span>
+                        <span class="history-status missed-status">
+                            Missed
+                        </span>
+                    </div>
+
+
+                    <div class="history-row">
+                        <span>Sep 30</span>
+                        <strong>Morning Medicine</strong>
+                        <span>8:00 AM</span>
+                        <span class="history-status taken-status">
+                            ✓ Taken
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSIGHTS ================= -->
+
+        <section class="insights-section" id="insights">
+
+            <div class="container">
+
+                <div class="insights-grid">
+
+                    <div class="insight-main">
+
+                        <span class="section-kicker">
+                            WEEKLY INSIGHT
+                        </span>
+
+                        <h2>
+                            Your routine is becoming more consistent.
+                        </h2>
+
+                        <p>
+                            You completed 94% of scheduled doses this week.
+                            Consistent tracking can help you keep a clear
+                            record of your routine.
+                        </p>
+
+                        <div class="insight-stats">
+
+                            <div>
+                                <strong>94%</strong>
+                                <span>Adherence</span>
+                            </div>
+
+                            <div>
+                                <strong>6</strong>
+                                <span>Day streak</span>
+                            </div>
+
+                            <div>
+                                <strong>18</strong>
+                                <span>Doses taken</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="routine-card">
+
+                        <div class="routine-icon">
+                            ✓
+                        </div>
+
+                        <span class="section-kicker">
+                            ROUTINE CHECK
+                        </span>
+
+                        <h3>
+                            All your scheduled medicines are organized.
+                        </h3>
+
+                        <p>
+                            Your next reminder is scheduled for 10:30 AM.
+                        </p>
+
+                        <button
+                            class="outline-light-btn"
+                            id="routineBtn"
+                        >
+                            View routine
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SAFETY ================= -->
+
+        <section class="safety-section">
+
+            <div class="container">
+
+                <div class="safety-card">
+
+                    <div class="safety-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <span class="section-kicker">
+                            IMPORTANT
+                        </span>
+
+                        <h3>Use Medora as an organizer, not a medical adviser.</h3>
+
+                        <p>
+                            This interface is for medication organization,
+                            reminders and tracking only. It does not diagnose
+                            conditions, recommend medicines or determine
+                            dosage. Always follow instructions from your
+                            doctor or pharmacist.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-card">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            YOUR DAILY ROUTINE
+                        </span>
+
+                        <h2>
+                            One simple place to
+                            <span>stay organized.</span>
+                        </h2>
+
+                        <p>
+                            Keep reminders, medication history and supplies
+                            together in one clear dashboard.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="primary-btn light-btn"
+                        id="ctaAddBtn"
+                    >
+                        + Add medication
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-mark">✚</span>
+                    <span>Med<span>ora</span></span>
+                </a>
+
+                <p>
+                    A modern medication organization and reminder interface.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Today</a>
+                <a href="#medications">Medications</a>
+                <a href="#history">History</a>
+                <a href="#insights">Insights</a>
+
+            </div>
+
+
+            <p class="copyright">
+                © 2026 Medora. Demo interface.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= ADD MEDICINE MODAL ================= -->
+
+    <div class="modal-overlay" id="medicineModal">
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <span class="section-kicker">
+                NEW MEDICATION
+            </span>
+
+            <h2>Add a medication</h2>
+
+            <p>
+                Create a reminder for your daily medication routine.
+            </p>
+
+            <form id="medicineForm">
+
+                <label>
+                    Medication name
+
+                    <input
+                        type="text"
+                        id="medicineName"
+                        placeholder="e.g. Daily Capsule"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+                    Type
+
+                    <select id="medicineType">
+
+                        <option>Tablet</option>
+                        <option>Capsule</option>
+                        <option>Vitamin</option>
+                        <option>Supplement</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+                    Reminder time
+
+                    <input
+                        type="time"
+                        id="medicineTime"
+                        required
+                    >
+
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-btn"
+                >
+                    Create reminder
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast">
+
+        <span class="toast-icon">✓</span>
+
+        <div>
+            <strong id="toastTitle">Done</strong>
+            <p id="toastMessage">
+                Action completed successfully.
+            </p>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
